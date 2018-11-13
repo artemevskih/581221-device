@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Alexey Artemevskih](https://up.htmlacademy.ru/htmlcss/23/user/581221).
-* Наставник: `Неизвестно`.
+* Наставник: `Сергей Артёмов`(https://htmlacademy.ru/profile/firefoxic).
 
 ---
 
