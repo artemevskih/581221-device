@@ -5,6 +5,90 @@
     <title>HTML Academy: Девайс</title>
   </head>
   <body>
+    <header class="main-header">
+      <nav class="main-navigation">
+        <h2 class="main-navigation__logo">DEVICE</h2>
+        <input type="search" placeholder="Поиск по сайту">
+        <ul class="main-user-navigation">
+          <li><a href="enter.html">Войти</a></li>
+          <li><a href="comparison.html">Сравнить</a></li>
+          <li><a href="basket.html">Корзина</a></li>
+        </ul>
+        <ul class="main-site-navigation">
+          <li>
+            <button class="main-submenu-toggle">Каталог товаров</button>
+            <ul class="main-submenu">
+              <li><a href="catalog-item.html">Виртуальная реальность</a></li>
+              <li><a href="catalog-item.html">Моноподы для селфи</a></li>
+              <li><a href="catalog-item.html"> Экшн-камеры</a></li>
+              <li><a href="catalog-item.html">Фитнес-браслеты</a></li>
+              <li><a href="catalog-item.html">Умные часы</a></li>
+              <li><a href="catalog-item.html">Квадрокоптеры</a></li>
+            </ul>
+          </li>
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="garanty.html">Гарантия</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Здесь будет main -->
+
+    <section class="info">
+      <h3>О нас</h3>
+      <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
+        <br />
+        <span>Мы можем доставить ваш товар в самые отдалённые точки России! DEVICE работает со многими транспортными компаниями:</span>
+      </p>
+      <ul>
+        <li><a href="">Деловые линии</a></li>
+        <li><a href="">Автотрейдинг</a></li>
+        <li><a href="">ЖелДорЭкспедиция</a></li>
+      </ul>
+      <a href="about-us.html">Подробнее о нас</a>
+    </section>
+
+    <section class="contacts">
+      <h3>Контакты</h3>
+      <p>Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки. Всякое бывает.</p>
+      <iframe class="small-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1891.2727278048312!2d37.527818508990045!3d55.68698863749251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1542623689454" width="560" height="220" frameborder="0" style="border:0" allowfullscreen></iframe><br />
+      <iframe class="map-popup" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1891.2727278048312!2d37.527818508990045!3d55.68698863749251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1542623689454" width="960" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <button>Напишите нам</button>
+      <form action="mail.php" class="writeus-modal">
+        <label for="writeus-name">Ваше имя:</label>
+        <input type="text" placeholder="Имя Фамилия" id="writeus-name">
+        <label for="writeus-email">Ваш e-mail:</label>
+        <input type="email" id="writeus-email" placeholder="email@example.com">
+        <label for="writeus-textarea">Текст письма:</label>
+        <textarea name="writeus-textarea" id="writeus-textarea" cols="80" rows="4" placeholder="В свободной форме"></textarea>
+        <input type="submit" id="writeus-submit">
+        <button class="writeus-modal-close">Закрыть</button>
+      </form>
+    </section>
+
+    <footer class="main-footer">
+      <nav class="footer-navigation">
+        <h2 class="main-footer__logo">DEVICE</h2>
+        <ul class="main-footer__user-navigation">
+          <li><a href="enter.html">Войти</a></li>
+          <li><a href="comparison.html">Сравнить</a></li>
+          <li><a href="basket.html">Корзина</a></li>
+        </ul>
+        <ul class="footer-site-navigation">
+          <li><a href="https://goo.gl/maps/woREYKRREx12" class="main-footer__address">г. Москва, ул. Строителей, 15</a></li>
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="garanty.html">Гарантия</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="tel:+74954959595" class="main-footer__phone">Тел: +7(495)495-95-95</a></li>
+        </ul>
+      </nav>
+      <ul class="main-footer__social">
+        <li><a href="https://facebook.com">Facebook</a></li>
+        <li><a href="https://instagram.com">Instagram</a></li>
+        <li><a href="https://twitter.com">Twitter</a></li>
+      </ul>
+      <a href="https://htmlacademy.ru" class="main-footer__copyrigth">HTML Academy</a>
+    </footer>
 
     <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
 
