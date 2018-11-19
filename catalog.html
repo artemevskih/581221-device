@@ -1,10 +1,78 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>HTML Academy: Девайс/Каталог</title>
-</head>
-<body>
-  <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-</body>
+  <html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>HTML Academy: Девайс/Каталог</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-navigation">
+        <h2 class="main-navigation__logo">DEVICE</h2>
+        <input type="search" placeholder="Поиск по сайту">
+        <ul class="main-user-navigation">
+          <li>
+            <a href="user.html">Валентин Петухов</a>
+            <a href="exit.html">Выйти</a>
+          </li>
+          <li><a href="comparison.html">Сравнить</a></li>
+          <li><a href="basket.html">Корзина</a></li>
+        </ul>
+        <ul class="main-site-navigation">
+          <li>
+            <button class="main-submenu-toggle">Каталог товаров</button>
+            <ul class="main-submenu">
+              <li><a href="catalog.html">Виртуальная реальность</a></li>
+              <li><a href="catalog.html">Моноподы для селфи</a></li>
+              <li><a href="catalog.html"> Экшн-камеры</a></li>
+              <li><a href="catalog.html">Фитнес-браслеты</a></li>
+              <li><a href="catalog.html">Умные часы</a></li>
+              <li><a href="catalog.html">Квадрокоптеры</a></li>
+            </ul>
+          </li>
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="garanty.html">Гарантия</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Моноподы для селфи</h1>
+      <ul class="breadcrumb">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalogs.html">Каталог</a></li>
+        <li><a class="active">Моноподы для селфи</a></li>
+      </ul>
+
+    </main>
+
+    <footer class="main-footer">
+      <nav class="footer-navigation">
+        <h2 class="main-footer__logo">DEVICE</h2>
+        <ul class="main-footer__user-navigation">
+          <li>
+            <a href="user.html">Валентин Петухов</a>
+            <a href="exit.html">Выйти</a>
+          </li>
+          <li><a href="comparison.html">Сравнить</a></li>
+          <li><a href="basket.html">Корзина</a></li>
+        </ul>
+        <ul class="footer-site-navigation">
+          <li><a href="https://goo.gl/maps/woREYKRREx12" class="main-footer__address">г. Москва, ул. Строителей, 15</a></li>
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="garanty.html">Гарантия</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="tel:+74954959595" class="main-footer__phone">Тел: +7(495)495-95-95</a></li>
+        </ul>
+      </nav>
+      <ul class="main-footer__social">
+        <li><a href="https://facebook.com">Facebook</a></li>
+        <li><a href="https://instagram.com">Instagram</a></li>
+        <li><a href="https://twitter.com">Twitter</a></li>
+      </ul>
+      <a href="https://htmlacademy.ru" class="main-footer__copyrigth">HTML Academy</a>
+    </footer>
+
+    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+  </body>
 </html>
