@@ -7,7 +7,10 @@
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-        <h2 class="main-navigation__logo">DEVICE</h2>
+        <a class="header-logo logo">
+          <img src="img/logo.svg" alt="Device" height="36" width="164">
+          <em>Device</em>
+        </a>
         <input type="search" placeholder="Поиск по сайту">
         <ul class="main-user-navigation">
           <li><a href="enter.html">Войти</a></li>
@@ -16,11 +19,11 @@
         </ul>
         <ul class="main-site-navigation">
           <li>
-            <button class="main-submenu-toggle">Каталог товаров</button>
+            <a class="main-submenu-toggle">Каталог товаров</a>
             <ul class="main-submenu">
               <li><a href="catalog.html">Виртуальная реальность</a></li>
               <li><a href="catalog.html">Моноподы для селфи</a></li>
-              <li><a href="catalog.html"> Экшн-камеры</a></li>
+              <li><a href="catalog.html">Экшн-камеры</a></li>
               <li><a href="catalog.html">Фитнес-браслеты</a></li>
               <li><a href="catalog.html">Умные часы</a></li>
               <li><a href="catalog.html">Квадрокоптеры</a></li>
@@ -36,10 +39,8 @@
 
     <section class="info">
       <h3>О нас</h3>
-      <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
-        <br />
-        <span>Мы можем доставить ваш товар в самые отдалённые точки России! DEVICE работает со многими транспортными компаниями:</span>
-      </p>
+      <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+      <p>Мы можем доставить ваш товар в самые отдалённые точки России! DEVICE работает со многими транспортными компаниями:</p>
       <ul>
         <li><a href="">Деловые линии</a></li>
         <li><a href="">Автотрейдинг</a></li>
@@ -51,17 +52,23 @@
     <section class="contacts">
       <h3>Контакты</h3>
       <p>Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки. Всякое бывает.</p>
-      <iframe class="small-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1891.2727278048312!2d37.527818508990045!3d55.68698863749251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1542623689454" width="560" height="220" frameborder="0" style="border:0" allowfullscreen></iframe>
-      <iframe class="map-popup" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1891.2727278048312!2d37.527818508990045!3d55.68698863749251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1542623689454" width="960" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <img src="http://placehold.it/560x220" alt="Карта (уменьшенная)" width="560" height="220" class="map-preview">
+      <iframe class="map-popup" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1891.2727278048312!2d37.527818508990045!3d55.68698863749251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1542623689454" width="960" height="560" allowfullscreen></iframe>
       <br />
       <button>Напишите нам</button>
-      <form action="mail.php" class="writeus-modal">
-        <label for="writeus-name">Ваше имя:</label>
-        <input type="text" placeholder="Имя Фамилия" id="writeus-name">
-        <label for="writeus-email">Ваш e-mail:</label>
-        <input type="email" id="writeus-email" placeholder="email@example.com">
-        <label for="writeus-textarea">Текст письма:</label>
-        <textarea name="writeus-textarea" id="writeus-textarea" cols="80" rows="4" placeholder="В свободной форме"></textarea>
+      <form action="https://echo.htmlacademy.ru" class="writeus-modal" method="post">
+        <p>
+          <label for="writeus-name">Ваше имя:</label>
+          <input type="text" placeholder="Имя Фамилия" id="writeus-name" name="name">
+        </p>
+        <p>
+          <label for="writeus-email">Ваш e-mail:</label>
+          <input type="email" id="writeus-email" placeholder="email@example.com" name="email">
+        </p>
+        <p>
+          <label for="writeus-textarea">Текст письма:</label>
+          <textarea name="writeus-textarea" value="text" id="writeus-textarea" cols="80" rows="4" placeholder="В свободной форме"></textarea>
+        </p>
         <input type="submit" id="writeus-submit">
         <button class="writeus-modal-close">Закрыть</button>
       </form>
@@ -69,7 +76,10 @@
 
     <footer class="main-footer">
       <nav class="footer-navigation">
-        <h2 class="main-footer__logo">DEVICE</h2>
+        <a class="header-logo logo">
+          <img src="img/logo.svg" alt="Device" height="36" width="164">
+          <em>Device</em>
+        </a>
         <ul class="main-footer__user-navigation">
           <li><a href="enter.html">Войти</a></li>
           <li><a href="comparison.html">Сравнить</a></li>
@@ -91,7 +101,7 @@
       <a href="https://htmlacademy.ru" class="main-footer__copyrigth">HTML Academy</a>
     </footer>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+    <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
 
   </body>
 </html>
