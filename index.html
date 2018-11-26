@@ -9,7 +9,7 @@
       <nav class="main-navigation">
         <a class="header-logo logo">
           <img src="img/logo.png" alt="Device" height="36" width="164">
-          <em>Device</em>
+          <em class="visually-hidden">Device</em>
         </a>
         <input type="search" placeholder="Поиск по сайту">
         <ul class="main-user-navigation">
@@ -52,28 +52,29 @@
     <section class="contacts">
       <h3>Контакты</h3>
       <p>Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки. Всякое бывает.</p>
-      <a href="large-map.html">
+      <a href="img/map-big.jpg">
         <img src="img/map.jpg" alt="Карта (уменьшенная)" width="560" height="220" class="map-preview">
-        <span>Увеличить карту</span>
+        <span class="visually-hidden">Увеличить карту</span>
       </a>
-      <iframe class="map-popup" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1891.2727278048312!2d37.527818508990045!3d55.68698863749251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1542623689454" width="960" height="560" allowfullscreen></iframe>
-      <br />
+      <img src="img/map-big.jpg" alt="Карта (увеличенная)" height="559" width="960">
       <button>Напишите нам</button>
       <form action="https://echo.htmlacademy.ru" class="writeus-modal" method="post">
-        <p>
-          <label for="writeus-name">Ваше имя:</label>
-          <input type="text" placeholder="Имя Фамилия" id="writeus-name" name="name">
-        </p>
-        <p>
-          <label for="writeus-email">Ваш e-mail:</label>
-          <input type="email" id="writeus-email" placeholder="email@example.com" name="email">
-        </p>
-        <p>
-          <label for="writeus-textarea">Текст письма:</label>
-          <textarea name="writeus-textarea" value="text" id="writeus-textarea" cols="80" rows="4" placeholder="В свободной форме"></textarea>
-        </p>
+        <ul>
+          <li>
+            <label for="writeus-name">Ваше имя:</label>
+            <input type="text" placeholder="Имя Фамилия" id="writeus-name" name="name">
+          </li>
+          <li>
+            <label for="writeus-email">Ваш e-mail:</label>
+            <input type="email" id="writeus-email" placeholder="email@example.com" name="email">
+          </li>
+          <li>
+            <label for="writeus-textarea">Текст письма:</label>
+            <textarea name="text" value="text" id="writeus-textarea" cols="80" rows="4" placeholder="В свободной форме"></textarea>
+          </li>
+        </ul>
         <input type="submit" id="writeus-submit">
-        <button class="writeus-modal-close">Закрыть</button>
+        <button class="writeus-modal-close visually-hidden">Закрыть</button>
       </form>
     </section>
 
@@ -81,7 +82,7 @@
       <nav class="footer-navigation">
         <a class="header-logo logo">
           <img src="img/footer-logo.png" alt="Device" height="36" width="164">
-          <em>Device</em>
+          <em class="visually-hidden">Device</em>
         </a>
         <ul class="main-footer__user-navigation">
           <li><a href="enter.html">Войти</a></li>
@@ -97,11 +98,11 @@
         </ul>
       </nav>
       <ul class="main-footer__social">
-        <li><a href="https://facebook.com">Facebook</a></li>
-        <li><a href="https://instagram.com">Instagram</a></li>
-        <li><a href="https://twitter.com">Twitter</a></li>
+        <li><a href="https://facebook.com" class="visually-hidden">Facebook</a></li>
+        <li><a href="https://instagram.com" class="visually-hidden">Instagram</a></li>
+        <li><a href="https://twitter.com" class="visually-hidden">Twitter</a></li>
       </ul>
-      <a href="https://htmlacademy.ru" class="main-footer__copyrigth">HTML Academy</a>
+      <a href="https://htmlacademy.ru" class="main-footer__copyrigth visually-hidden">HTML Academy</a>
     </footer>
 
     <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
