@@ -8,8 +8,7 @@
     <header class="main-header">
       <nav class="main-navigation">
         <a class="header-logo logo">
-          <img src="img/logo.png" alt="Device" height="36" width="164">
-          <em class="visually-hidden">Device</em>
+          <img src="img/logo.png" alt="Device Logo" height="36" width="164">
         </a>
         <input type="search" placeholder="Поиск по сайту">
         <ul class="main-user-navigation">
@@ -56,33 +55,15 @@
         <img src="img/map.jpg" alt="Карта (уменьшенная)" width="560" height="220" class="map-preview">
         <span class="visually-hidden">Увеличить карту</span>
       </a>
-      <img src="img/map-big.jpg" alt="Карта (увеличенная)" height="559" width="960">
-      <button>Напишите нам</button>
-      <form action="https://echo.htmlacademy.ru" class="writeus-modal" method="post">
-        <ul>
-          <li>
-            <label for="writeus-name">Ваше имя:</label>
-            <input type="text" placeholder="Имя Фамилия" id="writeus-name" name="name">
-          </li>
-          <li>
-            <label for="writeus-email">Ваш e-mail:</label>
-            <input type="email" id="writeus-email" placeholder="email@example.com" name="email">
-          </li>
-          <li>
-            <label for="writeus-textarea">Текст письма:</label>
-            <textarea name="text" value="text" id="writeus-textarea" cols="80" rows="4" placeholder="В свободной форме"></textarea>
-          </li>
-        </ul>
-        <input type="submit" id="writeus-submit">
-        <button class="writeus-modal-close visually-hidden">Закрыть</button>
-      </form>
+
+      <a href="writeus.html">Напишите нам</a>
+
     </section>
 
     <footer class="main-footer">
       <nav class="footer-navigation">
         <a class="header-logo logo">
-          <img src="img/footer-logo.png" alt="Device" height="36" width="164">
-          <em class="visually-hidden">Device</em>
+          <img src="img/footer-logo.png" alt="Device Logo" height="36" width="164">
         </a>
         <ul class="main-footer__user-navigation">
           <li><a href="enter.html">Войти</a></li>
@@ -98,14 +79,54 @@
         </ul>
       </nav>
       <ul class="main-footer__social">
-        <li><a href="https://facebook.com" class="visually-hidden">Facebook</a></li>
-        <li><a href="https://instagram.com" class="visually-hidden">Instagram</a></li>
-        <li><a href="https://twitter.com" class="visually-hidden">Twitter</a></li>
+        <li>
+          <a href="https://facebook.com">
+            <span class="visually-hidden">Facebook</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com">
+            <span class="visually-hidden">Istagram</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com">
+            <span class="visually-hidden">Twitter</span>
+          </a>
+        </li>
       </ul>
-      <a href="https://htmlacademy.ru" class="main-footer__copyrigth visually-hidden">HTML Academy</a>
+      <a href="https://htmlacademy.ru" class="main-footer__copyrigth">
+        <span class="visually-hidden">HTML Academy</span>
+      </a>
     </footer>
 
-    <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
+    <section class="map-popup">
+      <img src="img/map-big.jpg" alt="Карта (увеличенная)" height="559" width="960">
+    </section>
 
+    <section class="form-modal">
+      <form action="https://echo.htmlacademy.ru" class="writeus-modal" method="post">
+        <ul>
+          <li>
+            <label for="writeus-name">Ваше имя:</label>
+            <input type="text" placeholder="Имя Фамилия" id="writeus-name" name="name">
+          </li>
+          <li>
+            <label for="writeus-email">Ваш e-mail:</label>
+            <input type="email" id="writeus-email" placeholder="email@example.com" name="email">
+          </li>
+          <li>
+            <label for="writeus-textarea">Текст письма:</label>
+            <textarea name="text" id="writeus-textarea" cols="80" rows="4" placeholder="В свободной форме"></textarea>
+          </li>
+        </ul>
+        <button type="submit" id="writeus-submit">Отправить</button>
+        <button class="writeus-modal-close" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+      </form>
+    </section>
+
+        <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
   </body>
 </html>
