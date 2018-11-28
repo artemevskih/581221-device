@@ -12,9 +12,9 @@
         </a>
         <input type="search" placeholder="Поиск по сайту">
         <ul class="main-user-navigation">
-          <li><a href="enter.html">Войти</a></li>
-          <li><a href="comparison.html">Сравнить</a></li>
-          <li><a href="basket.html">Корзина</a></li>
+          <li><a href="#">Войти</a></li>
+          <li><a href="#">Сравнить</a></li>
+          <li><a href="#">Корзина</a></li>
         </ul>
         <ul class="main-site-navigation">
           <li>
@@ -28,9 +28,9 @@
               <li><a href="catalog.html">Квадрокоптеры</a></li>
             </ul>
           </li>
-          <li><a href="delivery.html">Доставка</a></li>
-          <li><a href="garanty.html">Гарантия</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Гарантия</a></li>
+          <li><a href="#">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -41,11 +41,11 @@
       <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
       <p>Мы можем доставить ваш товар в самые отдалённые точки России! DEVICE работает со многими транспортными компаниями:</p>
       <ul>
-        <li><a href="">Деловые линии</a></li>
-        <li><a href="">Автотрейдинг</a></li>
-        <li><a href="">ЖелДорЭкспедиция</a></li>
+        <li><a href="#">Деловые линии</a></li>
+        <li><a href="#">Автотрейдинг</a></li>
+        <li><a href="#">ЖелДорЭкспедиция</a></li>
       </ul>
-      <a href="about-us.html">Подробнее о нас</a>
+      <a href="#">Подробнее о нас</a>
     </section>
 
     <section class="contacts">
@@ -53,11 +53,9 @@
       <p>Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки. Всякое бывает.</p>
       <a href="img/map-big.jpg">
         <img src="img/map.jpg" alt="Карта (уменьшенная)" width="560" height="220" class="map-preview">
-        <span class="visually-hidden">Увеличить карту</span>
+        <!-- <span class="visually-hidden">Увеличить карту</span> -->
       </a>
-
-      <a href="writeus.html">Напишите нам</a>
-
+      <a href="#" title="Напишите нам">Напишите нам</a>
     </section>
 
     <footer class="main-footer">
@@ -66,31 +64,31 @@
           <img src="img/footer-logo.png" alt="Device Logo" height="36" width="164">
         </a>
         <ul class="main-footer__user-navigation">
-          <li><a href="enter.html">Войти</a></li>
-          <li><a href="comparison.html">Сравнить</a></li>
-          <li><a href="basket.html">Корзина</a></li>
+          <li><a href="#">Войти</a></li>
+          <li><a href="#">Сравнить</a></li>
+          <li><a href="#">Корзина</a></li>
         </ul>
         <ul class="footer-site-navigation">
           <li><a href="https://goo.gl/maps/woREYKRREx12" class="main-footer__address">г. Москва, ул. Строителей, 15</a></li>
-          <li><a href="delivery.html">Доставка</a></li>
-          <li><a href="garanty.html">Гарантия</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Гарантия</a></li>
+          <li><a href="#">Контакты</a></li>
           <li><a href="tel:+74954959595" class="main-footer__phone">Тел: +7(495)495-95-95</a></li>
         </ul>
       </nav>
       <ul class="main-footer__social">
         <li>
-          <a href="https://facebook.com">
+          <a href="#">
             <span class="visually-hidden">Facebook</span>
           </a>
         </li>
         <li>
-          <a href="https://instagram.com">
+          <a href="#">
             <span class="visually-hidden">Istagram</span>
           </a>
         </li>
         <li>
-          <a href="https://twitter.com">
+          <a href="#">
             <span class="visually-hidden">Twitter</span>
           </a>
         </li>
@@ -100,12 +98,12 @@
       </a>
     </footer>
 
-    <section class="map-popup">
+    <section class="map-popup" hidden>
       <img src="img/map-big.jpg" alt="Карта (увеличенная)" height="559" width="960">
     </section>
 
-    <section class="form-modal">
-      <form action="https://echo.htmlacademy.ru" class="writeus-modal" method="post">
+    <section class="form-modal" hidden>
+      <form action="https://echo.htmlacademy.ru" class="writeus-modal" method="post" type="hidden">
         <ul>
           <li>
             <label for="writeus-name">Ваше имя:</label>
