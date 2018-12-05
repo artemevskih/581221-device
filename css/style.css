@@ -243,10 +243,64 @@ a {
   line-height: 40px;
 }
 
-/* сброс кнопок на странице catalog.html */
+.form-modal ul {
+  list-style-type: none;
+}
+
+.form-modal input,
+.form-modal textarea,
+.writeus-modal-close {
+  border: none;
+  background: none;
+  outline: none;
+ }
+
+.form-modal label {
+  display: block;
+
+  font-family: 'Gilroy - Extra Bold';
+  font-size: 17.5px;
+  font-weight: 800;
+  line-height: 1.4;
+
+  color: #000000;
+}
+
+.form-modal input,
+.form-modal textarea {
+  background-color: rgb(242, 242, 242);
+
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.25;
+
+  color: rgba(70, 70, 70, 0.4);
+
+}
+
+
+
+.writeus-modal-close {
+  height: 55px;
+  width: 55px;
+
+  border: none;
+  background: none;
+
+  cursor: pointer;
+
+  outline: none;
+
+  background-image: url(../img/modal-close.svg);
+  background-repeat: no-repeat;
+}
+
+/* сброс кнопок  */
 .filter button[type="submit"],
 button[name="add-to-cart"],
-button[name="add-to-compare"] {
+button[name="add-to-compare"],
+.write-us-submit {
   border: none;
   background: none;
 
@@ -259,7 +313,8 @@ button[name="add-to-compare"] {
 .info > a:last-of-type,
 .contacts > a:last-of-type,
 .filter button[type="submit"],
-button[name="add-to-cart"] {
+button[name="add-to-cart"],
+.write-us-submit {
   color: #000000;
   font-family: "Gilroy - Extra Bold";
   font-size: 18px;
@@ -278,7 +333,8 @@ button[name="add-to-cart"] {
 .info > a:last-of-type:hover,
 .contacts > a:last-of-type:hover,
 .filter button[type="submit"]:hover,
-button[name="add-to-cart"]:hover {
+button[name="add-to-cart"]:hover,
+.write-us-submit:hover {
   -webkit-background-size: 1px 100%;
   background-size: 1px 100%;
 }
@@ -286,7 +342,8 @@ button[name="add-to-cart"]:hover {
 .info > a:last-of-type:active,
 .contacts > a:last-of-type:active,
 .filter button[type="submit"]:active,
-button[name="add-to-cart"]:active {
+button[name="add-to-cart"]:active,
+.write-us-submit:active {
   -webkit-background-size: 1px 100%;
   background-size: 1px 100%;
   color: rgba(0, 0, 0, 0.3);

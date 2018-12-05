@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="">
   </head>
   <body>
     <header class="main-header">
@@ -108,11 +107,13 @@
     </footer>
 
     <section class="map-popup" hidden>
+      <h3 class="visually-hidden">Увеличенная карта</h3>
       <img src="img/map-big.jpg" alt="Карта (увеличенная)" height="559" width="960">
     </section>
 
-    <section class="form-modal" hidden>
-      <form action="https://echo.htmlacademy.ru" class="writeus-modal" method="post" type="hidden">
+    <section class="form-modal">
+      <h3 class="visually-hidden">Форма обратной связи:</h3>
+      <form action="https://echo.htmlacademy.ru" class="writeus-modal" method="post">
         <ul>
           <li>
             <label for="writeus-name">Ваше имя:</label>
@@ -127,7 +128,7 @@
             <textarea name="text" id="writeus-textarea" cols="80" rows="4" placeholder="В свободной форме"></textarea>
           </li>
         </ul>
-        <button type="submit" id="writeus-submit">Отправить</button>
+        <button type="submit" id="writeus-submit" class="write-us-submit">Отправить</button>
         <button class="writeus-modal-close" type="button">
           <span class="visually-hidden">Закрыть</span>
         </button>
