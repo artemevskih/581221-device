@@ -35,21 +35,124 @@ a {
   background-color: rgba(240, 197, 46, 0.5);
 }
 
-.site-search {
+.inner-logo:hover,
+.main-user-navigation a:hover,
+.main-site-navigation a:hover,
+.footer-site-navigation li:not(:first-child):not(:last-child) a:hover,
+.main-footer__social li a:hover,
+.main-footer__social li:last-child a:hover  {
+  opacity: 0.6;
+}
+
+.inner-logo:active,
+.main-user-navigation a:focus,
+.main-site-navigation a:focus,
+.main-footer__user-navigation a:active,
+.footer-site-navigation li:not(:first-child):not(:last-child) a:active,
+.main-footer__social li:last-child a:active {
+  opacity: 0.3;
+}
+
+.site-search input[type="search"] {
   border: none;
+  border-bottom: 2px solid transparent;
+  border-top: 2px solid transparent;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 
   background-color: inherit;
-  background-repeat: no-repeat;
   background-image: url(../img/search.svg);
+  background-repeat: no-repeat;
   background-position: 0 50%;
 
-  padding-left: 36px;
-
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   font-size: 15px;
   font-weight: 300;
-  line-height: 30px;
-  letter-spacing: 0.15px;
+  line-height: 44px;
+
+  color: #000000;
+
+  padding-left: 20px;
+
+  outline: none;
+}
+
+.site-search input[type="search"]::-webkit-input-placeholder {
+  opacity: 0.3;
+}
+
+.site-search input[type="search"]::-ms-input-placeholder {
+  opacity: 0.3;
+}
+
+.site-search input[type="search"]::-moz-placeholder {
+  opacity: 0.3;
+}
+
+.site-search input[type="search"]:hover::-webkit-input-placeholder,
+.site-search input[type="search"]:focus::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.site-search input[type="search"]:hover::-ms-input-placeholder,
+.site-search input[type="search"]:focus::-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.site-search input[type="search"]:hover::-moz-placeholder,
+.site-search input[type="search"]:focus::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.site-search input[type="search"]:focus {
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid #000000;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  line-height: 44px;
+}
+
+.site-search input[type="search"]:focus ~ button[type="submit"] {
+  bottom: 0;
+}
+
+.site-search button {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  font-family: 'Open Sans';
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 46px;
+  letter-spacing: 0.2px;
+  color: #000000;
+
+  cursor: pointer;
+
+  padding: 0 21px;
+
+  margin-left: -4px;
+
+  border: 2px solid black;
+  background: none;
+
+  outline: none;
+  /* не завершено */
+}
+
+.site-search button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.site-search button:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .main-user-navigation,
@@ -92,6 +195,14 @@ a {
   letter-spacing: 3.6px;
 }
 
+.main-site-navigation li:first-child:hover .main-submenu {
+  display: block;
+}
+
+.main-submenu {
+  display: none;
+}
+
 .main-submenu a {
   color: #000000;
   font-family: "Open Sans";
@@ -132,8 +243,23 @@ a {
   line-height: 40px;
 }
 
+/* сброс кнопок на странице catalog.html */
+.filter button[type="submit"],
+button[name="add-to-cart"],
+button[name="add-to-compare"] {
+  border: none;
+  background: none;
+
+  cursor: pointer;
+
+  outline: none;
+}
+/* ----------------------------------------------------  */
+
 .info > a:last-of-type,
-.contacts > a:last-of-type {
+.contacts > a:last-of-type,
+.filter button[type="submit"],
+button[name="add-to-cart"] {
   color: #000000;
   font-family: "Gilroy - Extra Bold";
   font-size: 18px;
@@ -143,18 +269,34 @@ a {
   letter-spacing: 2.15px;
 
   background-image: linear-gradient(#f0c52e 0%, #f0c52e 100%);
-  -webkit-background-size: 8px 8px;
-  background-size: 8px 8px;
+  -webkit-background-size: 1px 8px;
+  background-size: 1px 8px;
   background-repeat: repeat-x;
   background-position: 0 50%;
 }
 
+.info > a:last-of-type:hover,
+.contacts > a:last-of-type:hover,
+.filter button[type="submit"]:hover,
+button[name="add-to-cart"]:hover {
+  -webkit-background-size: 1px 100%;
+  background-size: 1px 100%;
+}
+
+.info > a:last-of-type:active,
+.contacts > a:last-of-type:active,
+.filter button[type="submit"]:active,
+button[name="add-to-cart"]:active {
+  -webkit-background-size: 1px 100%;
+  background-size: 1px 100%;
+  color: rgba(0, 0, 0, 0.3);
+}
 
 .main-footer {
   background-color: #464646;
 }
 
-.main-footer__user-navigation a{
+.main-footer__user-navigation a {
   opacity: 0.7;
   color: #ffffff;
   font-family: "Open Sans";
@@ -162,6 +304,22 @@ a {
   font-weight: 300;
   line-height: 36px;
   letter-spacing: 0.15px;
+}
+
+.main-footer__user-navigation li:first-child a:first-child:before {
+  content: url(../img/footer-user.svg);
+}
+
+.main-footer__user-navigation li:nth-child(2) a:before {
+  content: url(../img/footer-compare.svg);
+}
+
+.main-footer__user-navigation li:last-child a:before {
+  content: url(../img/footer-cart.svg);
+}
+
+.main-footer__user-navigation a:hover {
+  opacity: 1;
 }
 
 .footer-site-navigation li:not(:first-child):not(:last-child) a {
@@ -183,7 +341,7 @@ a {
   line-height: 30px;
 }
 
-.main-footer__social li a{
+.main-footer__social li a {
   display: block;
 
   width: 32px;
@@ -195,19 +353,23 @@ a {
   opacity: 0.3;
 }
 
-.main-footer__social li:first-child a{
+.main-footer__social li a:active {
+  opacity: 0.1;
+}
+
+.main-footer__social li:first-child a {
   background-image: url(../img/fb.svg);
 }
 
-.main-footer__social li:nth-child(2) a{
+.main-footer__social li:nth-child(2) a {
   background-image: url(../img/instagram.svg);
 }
 
-.main-footer__social li:nth-child(3) a{
+.main-footer__social li:nth-child(3) a {
   background-image: url(../img/twitter.svg);
 }
 
-.main-footer__social li:last-child a{
+.main-footer__social li:last-child a {
   display: block;
 
   opacity: 1;
@@ -217,6 +379,10 @@ a {
 
   background-image: url(../img/logo-html.svg);
 }
+
+/****************************/
+/****** catalog.html ********/
+/****************************/
 
 main h1 {
   color: #000000;
@@ -246,4 +412,140 @@ main h1 {
 
   width: 4px;
   height: 7px;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter legend {
+  border-top: 2px solid #000000;
+  width: 100%;
+
+  font-family: "Gilroy - Extra Bold";
+  font-size: 18px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: 0.2px;
+  text-align: left;
+  color: #000000;
+}
+
+.filter input {
+  display: none;
+}
+
+.color span,
+.bluetooth span {
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 300;
+  /*line-height: 2.86;*/
+  letter-spacing: 0.1px;
+  color: #000000;
+
+  position: relative;
+}
+
+.color span:before {
+  content: url(../img/checkbox-off.svg);
+
+  /*position: absolute;
+
+  left: -40px;*/
+  display: inline-block;
+  vertical-align: middle;
+
+}
+
+.color input:checked ~ span:before {
+  content: url(../img/checkbox-on.svg);
+}
+
+.bluetooth span:before {
+  content: url(../img/radio-off.svg);
+
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.bluetooth input:checked ~ span:before {
+  content: url(../img/radio-on.svg);
+}
+
+.item-list {
+  list-style-type: none;
+}
+
+.item-list dt {
+  font-family: "Gilroy - Extra Bold";
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  line-height: 1.33;
+  color: #000000;
+}
+
+.item-list dd {
+  font-family: 'Gilroy - Light';
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  color: #464646;
+}
+
+.color label:hover,
+.bluetooth label:hover {
+  opacity: 0.6;
+}
+
+.color label:active,
+.bluetooth label:active {
+  opacity: 1;
+}
+
+.item-container {
+  position: relative;
+}
+
+.item-container form {
+  display: none;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 360px;
+  height: 380px;
+
+  background-color: rgba(238, 238, 238, 0.7);
+}
+
+.item-container:hover form {
+  display: block;
+}
+
+button[name="add-to-compare"] {
+  opacity: 0.5;
+  font-family: 'Open Sans';
+  font-size: 13px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.54;
+  letter-spacing: 0.1px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+button[name="add-to-compare"]:hover {
+  opacity: 1;
+  color: rgba(0, 0, 0, 1);
+}
+
+button[name="add-to-compare"]:active {
+  color: rgba(0, 0, 0, 0.2);
+  opacity: 0.2;
 }

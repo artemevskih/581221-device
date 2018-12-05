@@ -8,10 +8,13 @@
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="header-logo logo" href="index.html">
+        <a class="header-logo inner-logo" href="index.html">
           <img src="img/logo.svg" alt="Device Logo" height="36" width="164">
         </a>
-        <input type="search" placeholder="Поиск по сайту" class="site-search">
+        <form action="https://echo.htmlacademy.ru" class="site-search">
+          <input type="search" id="site-search" name="search" placeholder="Поиск по сайту">
+          <button type="submit">Найти</button>
+        </form>
         <ul class="main-user-navigation">
           <li>
             <a href="#">Валентин Петухов</a>
@@ -85,28 +88,68 @@
       </form>
       <ul class="item-list">
         <li class="item-card">
-          <img src="img/item-1.jpg" alt="Карточка товара" height="380" width="360">
+          <div class="item-container">
+            <img src="img/item-1.jpg" alt="Карточка товара" height="380" width="360">
+            <form action="echo.htmlacademy.ru">
+              <button type="button" name="add-to-cart">
+                В корзину
+              </button>
+              <button type="button" name="add-to-compare">
+                Добавить к сравнению
+              </button>
+            </form>
+          </div>
           <dl>
             <dt>Любительская селфи-палка</dt>
             <dd>500 руб.</dd>
           </dl>
         </li>
         <li class="item-card">
-          <img src="img/item-2.jpg" alt="Карточка товара" height="380" width="360">
+          <div class="item-container">
+            <img src="img/item-2.jpg" alt="Карточка товара" height="380" width="360">
+            <form action="echo.htmlacademy.ru">
+              <button type="button" name="add-to-cart">
+                В корзину
+              </button>
+              <button type="button" name="add-to-compare">
+                Добавить к сравнению
+              </button>
+            </form>
+          </div>
           <dl>
-            <dt>Профессиональная селфи-палка</dt>
+            <dt>Профессиональная <br />селфи-палка</dt>
             <dd>1 500 руб.</dd>
           </dl>
         </li>
         <li class="item-card">
-          <img src="img/item-3.jpg" alt="Карточка товара" height="380" width="360">
+          <div class="item-container">
+            <img src="img/item-3.jpg" alt="Карточка товара" height="380" width="360">
+            <form action="echo.htmlacademy.ru">
+              <button type="button" name="add-to-cart">
+                В корзину
+              </button>
+              <button type="button" name="add-to-compare">
+                Добавить к сравнению
+              </button>
+            </form>
+          </div>
           <dl>
             <dt>Непотопляемая селфи-палка</dt>
             <dd>2 500 руб.</dd>
           </dl>
         </li>
         <li class="item-card">
-          <img src="img/item-4.jpg" alt="Карточка товара" height="380" width="360">
+          <div class="item-container">
+            <img src="img/item-4.jpg" alt="Карточка товара" height="380" width="360">
+            <form action="echo.htmlacademy.ru">
+              <button type="button" name="add-to-cart">
+                В корзину
+              </button>
+              <button type="button" name="add-to-compare">
+                Добавить к сравнению
+              </button>
+            </form>
+          </div>
           <dl>
             <dt>Селфи-палка "Следуй за мной"</dt>
             <dd>4900 руб.</dd>
@@ -117,7 +160,7 @@
 
     <footer class="main-footer">
       <nav class="footer-navigation">
-        <a class="header-logo logo" href="index.html">
+        <a class="header-logo inner-logo" href="index.html">
           <img src="img/logo-footer.svg" alt="Device Logo" height="36" width="164">
         </a>
         <ul class="main-footer__user-navigation">
