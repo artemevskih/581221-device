@@ -70,6 +70,12 @@ a {
 
 .main-header {
   background-color: rgba(240, 197, 46, 0.5);
+
+  position: relative;
+
+  max-width: 1038px;
+  margin: 40px auto 0 auto;
+  padding: 53px 61px 0 61px;
 }
 
 .inner-logo:hover,
@@ -90,6 +96,53 @@ a {
   opacity: 0.3;
 }
 
+.header-logo {
+  display: block;
+
+  position: absolute;
+  top: -17.5px;
+}
+
+.site-search,
+.main-user-nav {
+  flex-basis: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.main-user-nav {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-user-item:first-child {
+  margin-right: auto;
+}
+
+.main-site-list {
+  flex-grow: 1;
+  flex-basis: auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  padding-top: 35px;
+}
+
+.main-site-item:first-child {
+  flex-basis: 50%;
+}
+
+.main-site-item:last-child {
+  margin-left: auto;
+}
+
 .site-search-input {
   border: none;
   border-bottom: 2px solid transparent;
@@ -104,7 +157,7 @@ a {
   background-repeat: no-repeat;
   background-position: 0 50%;
 
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 15px;
   font-weight: 300;
   line-height: 44px;
@@ -154,8 +207,9 @@ a {
   line-height: 44px;
 }
 
-.site-search-input:focus ~ .site-search-btn {
-  bottom: 0;
+.site-search-input:focus ~ .site-search-btn,
+.site-search-input:hover ~ .site-search-btn {
+  opacity: 1;
 }
 
 .site-search-btn {
@@ -163,7 +217,7 @@ a {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 15px;
   font-weight: 300;
   line-height: 46px;
@@ -180,8 +234,25 @@ a {
   background: none;
 
   outline: none;
+
+  position: relative;
+
+  opacity: 0;
+
+  cursor: default;
+
   /* не завершено */
 }
+
+/*.site-search-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 197, 46, 0.5);
+}*/
 
 .site-search-btn:hover {
   background-color: #000000;
@@ -189,7 +260,21 @@ a {
 }
 
 .site-search-btn:active {
+  opacity: 1;
   color: rgba(255, 255, 255, 0.3);
+}
+
+.main-navigation {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .main-user-nav,
@@ -199,11 +284,12 @@ a {
 .footer-nav-list,
 .footer-social-list {
   list-style-type: none;
+  padding: 0;
 }
 
 .main-user-nav a {
   color: #000000;
-  font-family: "Open Sans";
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 15px;
   font-weight: 300;
   line-height: 30px;
@@ -224,7 +310,7 @@ a {
 
 .main-site-item > a {
   color: #000000;
-  font-family: "Gilroy";
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 24px;
@@ -242,7 +328,7 @@ a {
 
 .main-submenu a {
   color: #000000;
-  font-family: "Open Sans";
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 15px;
   font-weight: 300;
   line-height: 36px;
@@ -252,7 +338,7 @@ a {
 .info h3,
 .contacts h3 {
   color: #000000;
-  font-family: "Gilroy";
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 47px;
   font-weight: 800;
   line-height: 48px;
@@ -262,7 +348,7 @@ a {
 .info p,
 .contacts p {
   color: #464646;
-  font-family: "Open Sans";
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 15px;
   font-weight: 300;
 }
@@ -274,7 +360,7 @@ a {
 
 .info-item a {
   color: #000000;
-  font-family: "Gilroy";
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 40px;
@@ -295,7 +381,7 @@ a {
 .form-modal label {
   display: block;
 
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 17.5px;
   font-weight: 800;
   line-height: 1.4;
@@ -307,7 +393,7 @@ a {
 .form-modal textarea {
   background-color: rgb(242, 242, 242);
 
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.25;
@@ -335,7 +421,7 @@ a {
 
 .btn {
   color: #000000;
-  font-family: "Gilroy";
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 24px;
@@ -367,7 +453,7 @@ a {
 .footer-user-item a {
   opacity: 0.7;
   color: #ffffff;
-  font-family: "Open Sans";
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 15px;
   font-weight: 300;
   line-height: 36px;
@@ -392,7 +478,7 @@ a {
 
 .footer-nav-item a {
   color: #ffffff;
-  font-family: "Gilroy";
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 24px;
@@ -403,7 +489,7 @@ a {
 .footer-nav-address,
 .footer-nav-phone {
   color: #ffffff;
-  font-family: "Open Sans";
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 15px;
   font-weight: 300;
   line-height: 30px;
@@ -454,7 +540,7 @@ a {
 
 main h1 {
   color: #000000;
-  font-family: "Gilroy";
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 47px;
   font-weight: 800;
   line-height: 48px;
@@ -468,7 +554,7 @@ main h1 {
 .breadcrumb a {
   opacity: 0.3;
   color: #000000;
-  font-family: "Open Sans";
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
@@ -490,7 +576,7 @@ main h1 {
   border-top: 2px solid #000000;
   width: 100%;
 
-  font-family: "Gilroy";
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 18px;
   font-weight: 800;
   font-style: normal;
@@ -507,7 +593,7 @@ main h1 {
 
 .color span,
 .bluetooth span {
-  font-family: "Open Sans";
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 14px;
   font-weight: 300;
   /*line-height: 2.86;*/
@@ -548,7 +634,7 @@ main h1 {
 }
 
 .item-list dt {
-  font-family: "Gilroy";
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 18px;
   font-weight: 800;
   letter-spacing: 0.2px;
@@ -557,7 +643,7 @@ main h1 {
 }
 
 .item-list dd {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.5;
@@ -598,7 +684,7 @@ main h1 {
 
 .btn-compare {
   opacity: 0.5;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 13px;
   font-weight: 300;
   font-style: normal;
