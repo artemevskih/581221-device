@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>HTML Academy: Девайс/Каталог</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -12,19 +14,21 @@
           <img src="img/logo.svg" alt="Device Logo" height="36" width="164">
         </a>
         <form action="https://echo.htmlacademy.ru" class="site-search">
-          <input type="search" id="site-search" name="search" placeholder="Поиск по сайту">
-          <button type="submit">Найти</button>
+          <input type="search" id="site-search" name="search" placeholder="Поиск по сайту" class="site-search-input">
+          <button type="submit" class="site-search-btn btn-reset">Найти</button>
         </form>
-        <ul class="main-user-navigation">
-          <li>
+
+        <ul class="main-user-nav">
+          <li class="main-user-item">
             <a href="#">Валентин Петухов</a>
             <a href="#">Выйти</a>
           </li>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
+          <li class="main-user-item"><a href="#">Сравнить</a></li>
+          <li class="main-user-item"><a href="#">Корзина</a></li>
         </ul>
-        <ul class="main-site-navigation">
-          <li>
+
+        <ul class="main-site-list">
+          <li class="main-site-item">
             <a class="main-submenu-toggle">Каталог товаров</a>
             <ul class="main-submenu">
               <li><a href="#">Виртуальная реальность</a></li>
@@ -35,9 +39,9 @@
               <li><a href="#">Квадрокоптеры</a></li>
             </ul>
           </li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li class="main-site-item"><a href="#">Доставка</a></li>
+          <li class="main-site-item"><a href="#">Гарантия</a></li>
+          <li class="main-site-item"><a href="#">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -84,17 +88,17 @@
             <span>Нет</span>
           </label>
         </fieldset>
-        <button type="submit">Показать</button>
+        <button type="submit" class="btn-reset btn">Показать</button>
       </form>
       <ul class="item-list">
         <li class="item-card">
           <div class="item-container">
             <img src="img/item-1.jpg" alt="Карточка товара" height="380" width="360">
-            <form action="echo.htmlacademy.ru">
-              <button type="button" name="add-to-cart">
+            <form action="echo.htmlacademy.ru" class="cart-add">
+              <button type="button" class="btn-reset btn">
                 В корзину
               </button>
-              <button type="button" name="add-to-compare">
+              <button type="button" class="btn-reset btn-compare">
                 Добавить к сравнению
               </button>
             </form>
@@ -108,10 +112,10 @@
           <div class="item-container">
             <img src="img/item-2.jpg" alt="Карточка товара" height="380" width="360">
             <form action="echo.htmlacademy.ru">
-              <button type="button" name="add-to-cart">
+              <button type="button" class="btn-reset btn">
                 В корзину
               </button>
-              <button type="button" name="add-to-compare">
+              <button type="button" class="btn-reset btn-compare">
                 Добавить к сравнению
               </button>
             </form>
@@ -125,10 +129,10 @@
           <div class="item-container">
             <img src="img/item-3.jpg" alt="Карточка товара" height="380" width="360">
             <form action="echo.htmlacademy.ru">
-              <button type="button" name="add-to-cart">
+              <button type="button" class="btn-reset btn">
                 В корзину
               </button>
-              <button type="button" name="add-to-compare">
+              <button type="button" class="btn-reset btn-compare">
                 Добавить к сравнению
               </button>
             </form>
@@ -142,10 +146,10 @@
           <div class="item-container">
             <img src="img/item-4.jpg" alt="Карточка товара" height="380" width="360">
             <form action="echo.htmlacademy.ru">
-              <button type="button" name="add-to-cart">
+              <button type="button" class="btn-reset btn">
                 В корзину
               </button>
-              <button type="button" name="add-to-compare">
+              <button type="button" class="btn-reset btn-compare">
                 Добавить к сравнению
               </button>
             </form>
@@ -159,44 +163,44 @@
     </main>
 
     <footer class="main-footer">
-      <nav class="footer-navigation">
+      <nav>
         <a class="header-logo inner-logo" href="index.html">
           <img src="img/logo-footer.svg" alt="Device Logo" height="36" width="164">
         </a>
-        <ul class="main-footer__user-navigation">
-          <li>
+        <ul class="footer-user-nav">
+          <li class="footer-user-item">
             <a href="#">Валентин Петухов</a>
             <a href="#">Выйти</a>
           </li>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
+          <li class="footer-user-item"><a href="#">Сравнить</a></li>
+          <li class="footer-user-item"><a href="#">Корзина</a></li>
         </ul>
-        <ul class="footer-site-navigation">
-          <li><a href="https://goo.gl/maps/woREYKRREx12" class="main-footer__address">г. Москва, ул. Строителей, 15</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
-          <li><a href="tel:+74954959595" class="main-footer__phone">Тел: +7(495)495-95-95</a></li>
+        <ul class="footer-nav-list">
+          <li><a href="https://goo.gl/maps/woREYKRREx12" class="footer-nav-address">г. Москва, ул. Строителей, 15</a></li>
+          <li class="footer-nav-item"><a href="#">Доставка</a></li>
+          <li class="footer-nav-item"><a href="#">Гарантия</a></li>
+          <li class="footer-nav-item"><a href="#">Контакты</a></li>
+          <li><a href="tel:+74954959595" class="footer-nav-phone">Тел: +7(495)495-95-95</a></li>
         </ul>
       </nav>
-      <ul class="main-footer__social">
-        <li>
+      <ul class="footer-social-list">
+        <li class="footer-social-item">
           <a href="#">
             <span class="visually-hidden">Facebook</span>
           </a>
         </li>
-        <li>
+        <li class="footer-social-item">
           <a href="#">
             <span class="visually-hidden">Instagram</span>
           </a>
         </li>
-        <li>
+        <li class="footer-social-item">
           <a href="#">
             <span class="visually-hidden">Twitter</span>
           </a>
         </li>
-        <li>
-          <a href="https://htmlacademy.ru" class="main-footer__copyrigth">
+        <li class="footer-social-item">
+          <a href="https://htmlacademy.ru" class="footer-social-copyright">
             <span class="visually-hidden">HTML Academy</span>
           </a>
         </li>

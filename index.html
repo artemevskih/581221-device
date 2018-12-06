@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -12,17 +14,18 @@
           <img src="img/logo.svg" alt="Device Logo" height="36" width="164">
         </a>
         <form action="https://echo.htmlacademy.ru" class="site-search">
-          <input type="search" id="site-search" name="search" placeholder="Поиск по сайту">
-          <button type="submit">Найти</button>
+          <input type="search" id="site-search" name="search" placeholder="Поиск по сайту" class="site-search-input">
+          <button type="submit" class="site-search-btn btn-reset">Найти</button>
         </form>
 
-        <ul class="main-user-navigation">
-          <li><a href="#">Войти</a></li>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
+        <ul class="main-user-nav">
+          <li class="main-user-item"><a href="#">Войти</a></li>
+          <li class="main-user-item"><a href="#">Сравнить</a></li>
+          <li class="main-user-item"><a href="#">Корзина</a></li>
         </ul>
-        <ul class="main-site-navigation">
-          <li>
+
+        <ul class="main-site-list">
+          <li class="main-site-item">
             <a class="main-submenu-toggle">Каталог товаров</a>
             <ul class="main-submenu">
               <li><a href="catalog.html">Виртуальная реальность</a></li>
@@ -33,9 +36,9 @@
               <li><a href="catalog.html">Квадрокоптеры</a></li>
             </ul>
           </li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li class="main-site-item"><a href="#">Доставка</a></li>
+          <li class="main-site-item"><a href="#">Гарантия</a></li>
+          <li class="main-site-item"><a href="#">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -45,12 +48,12 @@
       <h3>О нас</h3>
       <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
       <p>Мы можем доставить ваш товар в самые отдалённые точки России! DEVICE работает со многими транспортными компаниями:</p>
-      <ul>
-        <li><a href="#">Деловые линии</a></li>
-        <li><a href="#">Автотрейдинг</a></li>
-        <li><a href="#">ЖелДорЭкспедиция</a></li>
+      <ul class="info-list">
+        <li class="info-item"><a href="#">Деловые линии</a></li>
+        <li class="info-item"><a href="#">Автотрейдинг</a></li>
+        <li class="info-item"><a href="#">ЖелДорЭкспедиция</a></li>
       </ul>
-      <a href="#">Подробнее о нас</a>
+      <a href="#" class="btn">Подробнее о нас</a>
     </section>
 
     <section class="contacts">
@@ -60,45 +63,45 @@
         <img src="img/map.jpg" alt="Карта (уменьшенная)" width="560" height="220" class="map-preview">
         <!-- <span class="visually-hidden">Увеличить карту</span> -->
       </a>
-      <a href="#" title="Напишите нам">Напишите нам</a>
+      <a href="#" title="Напишите нам" class="btn">Напишите нам</a>
     </section>
 
     <footer class="main-footer">
-      <nav class="footer-navigation">
+      <nav>
         <a class="header-logo logo">
           <img src="img/logo-footer.svg" alt="Device Logo" height="36" width="163">
         </a>
-        <ul class="main-footer__user-navigation">
-          <li><a href="#">Войти</a></li>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
+        <ul class="footer-user-nav">
+          <li class="footer-user-item"><a href="#">Войти</a></li>
+          <li class="footer-user-item"><a href="#">Сравнить</a></li>
+          <li class="footer-user-item"><a href="#">Корзина</a></li>
         </ul>
-        <ul class="footer-site-navigation">
-          <li><a href="https://goo.gl/maps/woREYKRREx12" class="main-footer__address">г. Москва, ул. Строителей, 15</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
-          <li><a href="tel:+74954959595" class="main-footer__phone">Тел: +7(495)495-95-95</a></li>
+        <ul class="footer-nav-list">
+          <li><a href="https://goo.gl/maps/woREYKRREx12" class="footer-nav-address">г. Москва, ул. Строителей, 15</a></li>
+          <li class="footer-nav-item"><a href="#">Доставка</a></li>
+          <li class="footer-nav-item"><a href="#">Гарантия</a></li>
+          <li class="footer-nav-item"><a href="#">Контакты</a></li>
+          <li><a href="tel:+74954959595" class="footer-nav-phone">Тел: +7(495)495-95-95</a></li>
         </ul>
       </nav>
-      <ul class="main-footer__social">
-        <li>
+      <ul class="footer-social-list">
+        <li class="footer-social-item">
           <a href="#">
             <span class="visually-hidden">Facebook</span>
           </a>
         </li>
-        <li>
+        <li class="footer-social-item">
           <a href="#">
             <span class="visually-hidden">Istagram</span>
           </a>
         </li>
-        <li>
+        <li class="footer-social-item">
           <a href="#">
             <span class="visually-hidden">Twitter</span>
           </a>
         </li>
-        <li>
-          <a href="https://htmlacademy.ru" class="main-footer__copyrigth">
+        <li class="footer-social-item">
+          <a href="https://htmlacademy.ru" class="footer-social-copyright">
             <span class="visually-hidden">HTML Academy</span>
           </a>
         </li>
@@ -111,7 +114,7 @@
       <img src="img/map-big.jpg" alt="Карта (увеличенная)" height="559" width="960">
     </section>
 
-    <section class="form-modal">
+    <section class="form-modal" hidden>
       <h3 class="visually-hidden">Форма обратной связи:</h3>
       <form action="https://echo.htmlacademy.ru" class="writeus-modal" method="post">
         <ul>
@@ -128,7 +131,7 @@
             <textarea name="text" id="writeus-textarea" cols="80" rows="4" placeholder="В свободной форме"></textarea>
           </li>
         </ul>
-        <button type="submit" id="writeus-submit" class="write-us-submit">Отправить</button>
+        <button type="submit" id="writeus-submit" class="write-us-submit button-reset">Отправить</button>
         <button class="writeus-modal-close" type="button">
           <span class="visually-hidden">Закрыть</span>
         </button>

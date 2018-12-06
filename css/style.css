@@ -1,20 +1,15 @@
-@import url(normalize.css);
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
-
 @font-face {
-  font-family: 'Gilroy - Extra Bold';
-  src: url("../fonts/web/Gilroyextrabold.woff") format('woff'),
-      url("../fonts/web/Gilroyextrabold.woff2") format('woff2'),
-      url("../fonts/gilroy/Gilroyextrabold.ttf") format('truetype');
-  font-weight: 900;
+  font-family: 'Gilroy';
+  src: url("../fonts/web/Gilroyextrabold.woff2") format('woff2'),
+       url("../fonts/web/Gilroyextrabold.woff") format('woff');
+  font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gilroy - Light';
-  src: url("../fonts/web/Gilroylight.woff") format('woff'),
-      url("../fonts/web/Gilroylight.woff2") format('woff2'),
-      url("../fonts/gilroy/Gilroylight.ttf") format('truetype');
+  font-family: 'Gilroy';
+  src: url("../fonts/web/Gilroylight.woff2") format('woff2'),
+       url("../fonts/web/Gilroylight.woff") format('woff');
   font-weight: 300;
   font-style: normal;
 }
@@ -25,35 +20,49 @@ a {
 
 .visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
+
+/* сброс кнопок  */
+.btn-reset {
+  border: none;
+  background: none;
+
+  cursor: pointer;
+
+  outline: none;
+}
+
 
 .main-header {
   background-color: rgba(240, 197, 46, 0.5);
 }
 
 .inner-logo:hover,
-.main-user-navigation a:hover,
-.main-site-navigation a:hover,
-.footer-site-navigation li:not(:first-child):not(:last-child) a:hover,
-.main-footer__social li a:hover,
-.main-footer__social li:last-child a:hover  {
+.main-user-nav a:hover,
+.main-site-list a:hover,
+.footer-nav-item a:hover,
+.footer-social-list a:hover,
+.footer-social-item:last-child a:hover  {
   opacity: 0.6;
 }
 
 .inner-logo:active,
-.main-user-navigation a:focus,
-.main-site-navigation a:focus,
-.main-footer__user-navigation a:active,
-.footer-site-navigation li:not(:first-child):not(:last-child) a:active,
-.main-footer__social li:last-child a:active {
+.main-user-nav a:focus,
+.main-site-list a:focus,
+.footer-user-nav a:active,
+.footer-nav-item a:active,
+.footer-social-list-copyright:active {
   opacity: 0.3;
 }
 
-.site-search input[type="search"] {
+.site-search-input {
   border: none;
   border-bottom: 2px solid transparent;
   border-top: 2px solid transparent;
@@ -79,34 +88,34 @@ a {
   outline: none;
 }
 
-.site-search input[type="search"]::-webkit-input-placeholder {
+.site-search-input::-webkit-input-placeholder {
   opacity: 0.3;
 }
 
-.site-search input[type="search"]::-ms-input-placeholder {
+.site-search-input::-ms-input-placeholder {
   opacity: 0.3;
 }
 
-.site-search input[type="search"]::-moz-placeholder {
+.site-search-input::-moz-placeholder {
   opacity: 0.3;
 }
 
-.site-search input[type="search"]:hover::-webkit-input-placeholder,
-.site-search input[type="search"]:focus::-webkit-input-placeholder {
+.site-search-input:hover::-webkit-input-placeholder,
+.site-search-input:focus::-webkit-input-placeholder {
   opacity: 0.6;
 }
 
-.site-search input[type="search"]:hover::-ms-input-placeholder,
-.site-search input[type="search"]:focus::-ms-input-placeholder {
+.site-search-input:hover::-ms-input-placeholder,
+.site-search-input:focus::-ms-input-placeholder {
   opacity: 0.6;
 }
 
-.site-search input[type="search"]:hover::-moz-placeholder,
-.site-search input[type="search"]:focus::-moz-placeholder {
+.site-search-input:hover::-moz-placeholder,
+.site-search-input:focus::-moz-placeholder {
   opacity: 0.6;
 }
 
-.site-search input[type="search"]:focus {
+.site-search-input:focus {
   border-top: 2px solid transparent;
   border-bottom: 2px solid #000000;
 
@@ -117,11 +126,11 @@ a {
   line-height: 44px;
 }
 
-.site-search input[type="search"]:focus ~ button[type="submit"] {
+.site-search-input:focus ~ .site-search-btn {
   bottom: 0;
 }
 
-.site-search button {
+.site-search-btn {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -146,25 +155,25 @@ a {
   /* не завершено */
 }
 
-.site-search button:hover {
+.site-search-btn:hover {
   background-color: #000000;
   color: #ffffff;
 }
 
-.site-search button:active {
+.site-search-btn:active {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.main-user-navigation,
+.main-user-nav,
 .main-submenu,
-.main-site-navigation,
-.main-footer__user-navigation,
-.footer-site-navigation,
-.main-footer__social {
+.main-site-list,
+.footer-user-nav,
+.footer-nav-list,
+.footer-social-list {
   list-style-type: none;
 }
 
-.main-user-navigation a {
+.main-user-nav a {
   color: #000000;
   font-family: "Open Sans";
   font-size: 15px;
@@ -173,29 +182,29 @@ a {
   letter-spacing: 0.15px;
 }
 
-.main-user-navigation li:first-child a:first-child:before {
+.main-user-item:first-child a:first-child:before {
   content: url(../img/user.svg);
 }
 
-.main-user-navigation li:nth-child(2) a:before {
+.main-user-item:nth-child(2) a:before {
   content: url(../img/compare.svg);
 }
 
-.main-user-navigation li:last-child a:before {
+.main-user-item:last-child a:before {
   content: url(../img/cart.svg);
 }
 
-.main-site-navigation > li > a {
+.main-site-item > a {
   color: #000000;
-  font-family: "Gilroy - Extra Bold";
+  font-family: "Gilroy";
   font-size: 18px;
-  font-weight: 900;
+  font-weight: 800;
   line-height: 24px;
   text-transform: uppercase;
   letter-spacing: 3.6px;
 }
 
-.main-site-navigation li:first-child:hover .main-submenu {
+.main-site-item:first-child:hover .main-submenu {
   display: block;
 }
 
@@ -215,9 +224,9 @@ a {
 .info h3,
 .contacts h3 {
   color: #000000;
-  font-family: "Gilroy - Extra Bold";
+  font-family: "Gilroy";
   font-size: 47px;
-  font-weight: 400;
+  font-weight: 800;
   line-height: 48px;
   letter-spacing: 0.21px;
 }
@@ -235,11 +244,11 @@ a {
   color: #e5e5e5;
 }
 
-.info ul li a {
+.info-item a {
   color: #000000;
-  font-family: "Gilroy - Extra Bold";
+  font-family: "Gilroy";
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 40px;
 }
 
@@ -258,7 +267,7 @@ a {
 .form-modal label {
   display: block;
 
-  font-family: 'Gilroy - Extra Bold';
+  font-family: 'Gilroy';
   font-size: 17.5px;
   font-weight: 800;
   line-height: 1.4;
@@ -279,8 +288,6 @@ a {
 
 }
 
-
-
 .writeus-modal-close {
   height: 55px;
   width: 55px;
@@ -296,29 +303,13 @@ a {
   background-repeat: no-repeat;
 }
 
-/* сброс кнопок  */
-.filter button[type="submit"],
-button[name="add-to-cart"],
-button[name="add-to-compare"],
-.write-us-submit {
-  border: none;
-  background: none;
-
-  cursor: pointer;
-
-  outline: none;
-}
 /* ----------------------------------------------------  */
 
-.info > a:last-of-type,
-.contacts > a:last-of-type,
-.filter button[type="submit"],
-button[name="add-to-cart"],
-.write-us-submit {
+.btn {
   color: #000000;
-  font-family: "Gilroy - Extra Bold";
+  font-family: "Gilroy";
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 800;
   line-height: 24px;
   text-transform: uppercase;
   letter-spacing: 2.15px;
@@ -330,20 +321,12 @@ button[name="add-to-cart"],
   background-position: 0 50%;
 }
 
-.info > a:last-of-type:hover,
-.contacts > a:last-of-type:hover,
-.filter button[type="submit"]:hover,
-button[name="add-to-cart"]:hover,
-.write-us-submit:hover {
+.btn:hover {
   -webkit-background-size: 1px 100%;
   background-size: 1px 100%;
 }
 
-.info > a:last-of-type:active,
-.contacts > a:last-of-type:active,
-.filter button[type="submit"]:active,
-button[name="add-to-cart"]:active,
-.write-us-submit:active {
+.btn:active {
   -webkit-background-size: 1px 100%;
   background-size: 1px 100%;
   color: rgba(0, 0, 0, 0.3);
@@ -353,7 +336,7 @@ button[name="add-to-cart"]:active,
   background-color: #464646;
 }
 
-.main-footer__user-navigation a {
+.footer-user-item a {
   opacity: 0.7;
   color: #ffffff;
   font-family: "Open Sans";
@@ -363,34 +346,34 @@ button[name="add-to-cart"]:active,
   letter-spacing: 0.15px;
 }
 
-.main-footer__user-navigation li:first-child a:first-child:before {
+.footer-user-item:first-child a:first-child:before {
   content: url(../img/footer-user.svg);
 }
 
-.main-footer__user-navigation li:nth-child(2) a:before {
+.footer-user-item:nth-child(2) a:before {
   content: url(../img/footer-compare.svg);
 }
 
-.main-footer__user-navigation li:last-child a:before {
+.footer-user-item:last-child a:before {
   content: url(../img/footer-cart.svg);
 }
 
-.main-footer__user-navigation a:hover {
+.footer-user-nav a:hover {
   opacity: 1;
 }
 
-.footer-site-navigation li:not(:first-child):not(:last-child) a {
+.footer-nav-item a {
   color: #ffffff;
-  font-family: "Gilroy - Extra Bold";
+  font-family: "Gilroy";
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 800;
   line-height: 24px;
   text-transform: uppercase;
   letter-spacing: 3.6px;
 }
 
-.footer-site-navigation li:first-child a,
-.footer-site-navigation li:last-child a {
+.footer-nav-address,
+.footer-nav-phone {
   color: #ffffff;
   font-family: "Open Sans";
   font-size: 15px;
@@ -398,7 +381,7 @@ button[name="add-to-cart"]:active,
   line-height: 30px;
 }
 
-.main-footer__social li a {
+.footer-social-item a {
   display: block;
 
   width: 32px;
@@ -410,23 +393,23 @@ button[name="add-to-cart"]:active,
   opacity: 0.3;
 }
 
-.main-footer__social li a:active {
+.footer-social-list a:active {
   opacity: 0.1;
 }
 
-.main-footer__social li:first-child a {
+.footer-social-item:first-child a {
   background-image: url(../img/fb.svg);
 }
 
-.main-footer__social li:nth-child(2) a {
+.footer-social-item:nth-child(2) a {
   background-image: url(../img/instagram.svg);
 }
 
-.main-footer__social li:nth-child(3) a {
+.footer-social-item:nth-child(3) a {
   background-image: url(../img/twitter.svg);
 }
 
-.main-footer__social li:last-child a {
+.footer-social-item:last-child a {
   display: block;
 
   opacity: 1;
@@ -443,9 +426,9 @@ button[name="add-to-cart"]:active,
 
 main h1 {
   color: #000000;
-  font-family: "Gilroy - Extra Bold";
+  font-family: "Gilroy";
   font-size: 47px;
-  font-weight: 900;
+  font-weight: 800;
   line-height: 48px;
   letter-spacing: 0.17px;
 }
@@ -479,7 +462,7 @@ main h1 {
   border-top: 2px solid #000000;
   width: 100%;
 
-  font-family: "Gilroy - Extra Bold";
+  font-family: "Gilroy";
   font-size: 18px;
   font-weight: 800;
   font-style: normal;
@@ -537,7 +520,7 @@ main h1 {
 }
 
 .item-list dt {
-  font-family: "Gilroy - Extra Bold";
+  font-family: "Gilroy";
   font-size: 18px;
   font-weight: 800;
   letter-spacing: 0.2px;
@@ -546,7 +529,7 @@ main h1 {
 }
 
 .item-list dd {
-  font-family: 'Gilroy - Light';
+  font-family: 'Gilroy';
   font-size: 16px;
   font-weight: 300;
   line-height: 1.5;
@@ -585,7 +568,7 @@ main h1 {
   display: block;
 }
 
-button[name="add-to-compare"] {
+.btn-compare {
   opacity: 0.5;
   font-family: 'Open Sans';
   font-size: 13px;
@@ -597,12 +580,12 @@ button[name="add-to-compare"] {
   color: rgba(0, 0, 0, 0.5);
 }
 
-button[name="add-to-compare"]:hover {
+.btn-compare:hover {
   opacity: 1;
   color: rgba(0, 0, 0, 1);
 }
 
-button[name="add-to-compare"]:active {
+.btn-compare:active {
   color: rgba(0, 0, 0, 0.2);
   opacity: 0.2;
 }
