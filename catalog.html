@@ -32,11 +32,11 @@
             <a class="main-submenu-toggle">Каталог товаров</a>
             <ul class="main-submenu">
               <li><a href="#">Виртуальная реальность</a></li>
-              <li><a href="catalog.html">Моноподы для селфи</a></li>
-              <li><a href="#"> Экшн-камеры</a></li>
               <li><a href="#">Фитнес-браслеты</a></li>
-              <li><a href="#">Умные часы</a></li>
               <li><a href="#">Квадрокоптеры</a></li>
+              <li><a href="catalog.html">Моноподы для селфи</a></li>
+              <li><a href="#">Умные часы</a></li>
+              <li><a href="#">Экшн-камеры</a></li>
             </ul>
           </li>
           <li class="main-site-item"><a href="#">Доставка</a></li>
@@ -46,120 +46,122 @@
       </nav>
     </header>
 
-    <main>
+    <main class="inner-main">
       <h1>Моноподы для селфи</h1>
       <ul class="breadcrumb">
         <li><a href="index.html">Главная</a></li>
         <li><a href="#">Каталог</a></li>
         <li><a class="active">Моноподы для селфи</a></li>
       </ul>
-      <form class="filter" method="post" action="https://echo.htmlacademy.ru">
-        <fieldset class="color">
-          <legend>Цвет</legend>
-          <label for="color-black">
-            <input type="checkbox" name="color-value" id="color-black" value="black" checked>
-            <span>Чёрный</span>
-          </label>
-          <label for="color-white">
-            <input type="checkbox" name="color-value" id="color-white" value="white">
-            <span>Белый</span>
-          </label>
-          <label for="color-blue">
-            <input type="checkbox" name="color-value" id="color-blue" value="blue" checked>
-            <span>Синий</span>
-          </label>
-          <label for="color-red">
-            <input type="checkbox" name="color-value" id="color-red" value="red" checked>
-            <span>Красный</span>
-          </label>
-          <label for="color-pink">
-            <input type="checkbox" name="color-value" id="color-pink" value="pink">
-            <span>Розовый</span>
-          </label>
-        </fieldset>
-        <fieldset class="bluetooth">
-          <legend>Bluetooth</legend>
-          <label for="bluetooth-yes">
-            <input type="radio" name="bluetooth-value" id="bluetooth-yes" checked value="yes">
-            <span>Есть</span>
-          </label>
-          <label for="bluetooth-no">
-            <input type="radio" name="bluetooth-value" id="bluetooth-no" value="no">
-            <span>Нет</span>
-          </label>
-        </fieldset>
-        <button type="submit" class="btn-reset btn">Показать</button>
-      </form>
-      <ul class="item-list">
-        <li class="item-card">
-          <div class="item-container">
-            <img src="img/item-1.jpg" alt="Карточка товара" height="380" width="360">
-            <form action="echo.htmlacademy.ru" class="cart-add">
-              <button type="button" class="btn-reset btn">
-                В корзину
-              </button>
-              <button type="button" class="btn-reset btn-compare">
-                Добавить к сравнению
-              </button>
-            </form>
-          </div>
-          <dl>
-            <dt>Любительская селфи-палка</dt>
-            <dd>500 руб.</dd>
-          </dl>
-        </li>
-        <li class="item-card">
-          <div class="item-container">
-            <img src="img/item-2.jpg" alt="Карточка товара" height="380" width="360">
-            <form action="echo.htmlacademy.ru">
-              <button type="button" class="btn-reset btn">
-                В корзину
-              </button>
-              <button type="button" class="btn-reset btn-compare">
-                Добавить к сравнению
-              </button>
-            </form>
-          </div>
-          <dl>
-            <dt>Профессиональная <br />селфи-палка</dt>
-            <dd>1 500 руб.</dd>
-          </dl>
-        </li>
-        <li class="item-card">
-          <div class="item-container">
-            <img src="img/item-3.jpg" alt="Карточка товара" height="380" width="360">
-            <form action="echo.htmlacademy.ru">
-              <button type="button" class="btn-reset btn">
-                В корзину
-              </button>
-              <button type="button" class="btn-reset btn-compare">
-                Добавить к сравнению
-              </button>
-            </form>
-          </div>
-          <dl>
-            <dt>Непотопляемая селфи-палка</dt>
-            <dd>2 500 руб.</dd>
-          </dl>
-        </li>
-        <li class="item-card">
-          <div class="item-container">
-            <img src="img/item-4.jpg" alt="Карточка товара" height="380" width="360">
-            <form action="echo.htmlacademy.ru">
-              <button type="button" class="btn-reset btn">
-                В корзину
-              </button>
-              <button type="button" class="btn-reset btn-compare">
-                Добавить к сравнению
-              </button>
-            </form>
-          </div>
-          <dl>
-            <dt>Селфи-палка "Следуй за мной"</dt>
-            <dd>4900 руб.</dd>
-          </dl>
-        </li>
-      </ul>
+      <div class="container wrapper">
+        <form class="filter" method="post" action="https://echo.htmlacademy.ru">
+          <fieldset class="color">
+            <legend>Цвет</legend>
+            <label for="color-black">
+              <input type="checkbox" name="color-value" id="color-black" value="black" checked>
+              <span>Чёрный</span>
+            </label>
+            <label for="color-white">
+              <input type="checkbox" name="color-value" id="color-white" value="white">
+              <span>Белый</span>
+            </label>
+            <label for="color-blue">
+              <input type="checkbox" name="color-value" id="color-blue" value="blue" checked>
+              <span>Синий</span>
+            </label>
+            <label for="color-red">
+              <input type="checkbox" name="color-value" id="color-red" value="red" checked>
+              <span>Красный</span>
+            </label>
+            <label for="color-pink">
+              <input type="checkbox" name="color-value" id="color-pink" value="pink">
+              <span>Розовый</span>
+            </label>
+          </fieldset>
+          <fieldset class="bluetooth">
+            <legend>Bluetooth</legend>
+            <label for="bluetooth-yes">
+              <input type="radio" name="bluetooth-value" id="bluetooth-yes" checked value="yes">
+              <span>Есть</span>
+            </label>
+            <label for="bluetooth-no">
+              <input type="radio" name="bluetooth-value" id="bluetooth-no" value="no">
+              <span>Нет</span>
+            </label>
+          </fieldset>
+          <button type="submit" class="btn-reset btn">Показать</button>
+        </form>
+        <ul class="item-list">
+          <li class="item-card">
+            <div class="item-container">
+              <img src="img/item-1.jpg" alt="Карточка товара" height="380" width="360">
+              <form action="echo.htmlacademy.ru" class="cart-add">
+                <button type="button" class="btn-reset btn">
+                  В корзину
+                </button>
+                <button type="button" class="btn-reset btn-compare">
+                  Добавить к сравнению
+                </button>
+              </form>
+            </div>
+            <dl>
+              <dt>Любительская селфи-палка</dt>
+              <dd>500 руб.</dd>
+            </dl>
+          </li>
+          <li class="item-card">
+            <div class="item-container">
+              <img src="img/item-2.jpg" alt="Карточка товара" height="380" width="360">
+              <form action="echo.htmlacademy.ru">
+                <button type="button" class="btn-reset btn">
+                  В корзину
+                </button>
+                <button type="button" class="btn-reset btn-compare">
+                  Добавить к сравнению
+                </button>
+              </form>
+            </div>
+            <dl>
+              <dt>Профессиональная <br />селфи-палка</dt>
+              <dd>1 500 руб.</dd>
+            </dl>
+          </li>
+          <li class="item-card">
+            <div class="item-container">
+              <img src="img/item-3.jpg" alt="Карточка товара" height="380" width="360">
+              <form action="echo.htmlacademy.ru">
+                <button type="button" class="btn-reset btn">
+                  В корзину
+                </button>
+                <button type="button" class="btn-reset btn-compare">
+                  Добавить к сравнению
+                </button>
+              </form>
+            </div>
+            <dl>
+              <dt>Непотопляемая селфи-палка</dt>
+              <dd>2 500 руб.</dd>
+            </dl>
+          </li>
+          <li class="item-card">
+            <div class="item-container">
+              <img src="img/item-4.jpg" alt="Карточка товара" height="380" width="360">
+              <form action="echo.htmlacademy.ru">
+                <button type="button" class="btn-reset btn">
+                  В корзину
+                </button>
+                <button type="button" class="btn-reset btn-compare">
+                  Добавить к сравнению
+                </button>
+              </form>
+            </div>
+            <dl>
+              <dt>Селфи-палка "Следуй за мной"</dt>
+              <dd>4900 руб.</dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
     </main>
 
     <footer class="main-footer">
