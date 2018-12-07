@@ -18,7 +18,7 @@
           <button type="submit" class="site-search-btn btn-reset">Найти</button>
         </form>
 
-        <ul class="main-user-nav">
+        <ul class="main-user-nav lst-reset">
           <li class="main-user-item">
             <a href="#">Валентин Петухов</a>
             <a href="#">Выйти</a>
@@ -27,17 +27,19 @@
           <li class="main-user-item"><a href="#">Корзина</a></li>
         </ul>
 
-        <ul class="main-site-list">
+        <ul class="main-site-list lst-reset">
           <li class="main-site-item">
             <a class="main-submenu-toggle">Каталог товаров</a>
-            <ul class="main-submenu">
-              <li><a href="#">Виртуальная реальность</a></li>
-              <li><a href="#">Фитнес-браслеты</a></li>
-              <li><a href="#">Квадрокоптеры</a></li>
-              <li><a href="catalog.html">Моноподы для селфи</a></li>
-              <li><a href="#">Умные часы</a></li>
-              <li><a href="#">Экшн-камеры</a></li>
-            </ul>
+            <div class="main-submenu-container">
+              <ul class="main-submenu lst-reset">
+                <li class="main-submenu-item"><a href="#">Виртуальная реальность</a></li>
+                <li class="main-submenu-item"><a href="#">Фитнес-браслеты</a></li>
+                <li class="main-submenu-item"><a href="#">Квадрокоптеры</a></li>
+                <li class="main-submenu-item"><a href="catalog.html">Моноподы для селфи</a></li>
+                <li class="main-submenu-item"><a href="#">Умные часы</a></li>
+                <li class="main-submenu-item"><a href="#">Экшн-камеры</a></li>
+              </ul>
+            </div>
           </li>
           <li class="main-site-item"><a href="#">Доставка</a></li>
           <li class="main-site-item"><a href="#">Гарантия</a></li>
@@ -48,7 +50,7 @@
 
     <main class="inner-main">
       <h1>Моноподы для селфи</h1>
-      <ul class="breadcrumb">
+      <ul class="breadcrumb wrapper">
         <li><a href="index.html">Главная</a></li>
         <li><a href="#">Каталог</a></li>
         <li><a class="active">Моноподы для селфи</a></li>
@@ -165,49 +167,51 @@
     </main>
 
     <footer class="main-footer">
-      <nav>
-        <a class="footer-logo inner-logo" href="index.html">
-          <img src="img/logo-footer.svg" alt="Device Logo" height="36" width="164">
-        </a>
-        <ul class="footer-user-nav">
-          <li class="footer-user-item">
-            <a href="#">Валентин Петухов</a>
-            <a href="#">Выйти</a>
-          </li>
-          <li class="footer-user-item"><a href="#">Сравнить</a></li>
-          <li class="footer-user-item"><a href="#">Корзина</a></li>
-        </ul>
-        <ul class="footer-nav-list">
-          <li><a href="https://goo.gl/maps/woREYKRREx12" class="footer-nav-address">г. Москва, ул. Строителей, 15</a></li>
-          <li class="footer-nav-item"><a href="#">Доставка</a></li>
-          <li class="footer-nav-item"><a href="#">Гарантия</a></li>
-          <li class="footer-nav-item"><a href="#">Контакты</a></li>
-          <li><a href="tel:+74954959595" class="footer-nav-phone">Тел: +7(495)495-95-95</a></li>
-        </ul>
-      </nav>
-      <ul class="footer-social-list">
-        <li class="footer-social-item">
-          <a href="#">
-            <span class="visually-hidden">Facebook</span>
+      <div class="wrapper footer-container">
+        <nav>
+          <a class="footer-logo inner-logo" href="index.html">
+            <img src="img/logo-footer.svg" alt="Device Logo" height="36" width="164">
           </a>
-        </li>
-        <li class="footer-social-item">
-          <a href="#">
-            <span class="visually-hidden">Instagram</span>
-          </a>
-        </li>
-        <li class="footer-social-item">
-          <a href="#">
-            <span class="visually-hidden">Twitter</span>
-          </a>
-        </li>
-        <li class="footer-social-item">
+          <ul class="footer-user-nav lst-reset">
+            <li class="footer-user-item">
+              <a href="#">Валентин Петухов</a>
+              <a href="#">Выйти</a>
+            </li>
+            <li class="footer-user-item"><a href="#">Сравнить</a></li>
+            <li class="footer-user-item"><a href="#">Корзина</a></li>
+          </ul>
+          <ul class="footer-nav-list lst-reset">
+            <li><a href="https://goo.gl/maps/woREYKRREx12" class="footer-nav-address">г. Москва, ул. Строителей, 15</a></li>
+            <li class="footer-nav-item"><a href="#">Доставка</a></li>
+            <li class="footer-nav-item"><a href="#">Гарантия</a></li>
+            <li class="footer-nav-item"><a href="#">Контакты</a></li>
+            <li><a href="tel:+74954959595" class="footer-nav-phone">Тел: +7(495)495-95-95</a></li>
+          </ul>
+        </nav>
+        <div class="footer-social">
+          <ul class="footer-social-list lst-reset">
+            <li class="footer-social-item">
+              <a href="#">
+                <span class="visually-hidden">Facebook</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a href="#">
+                <span class="visually-hidden">Istagram</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a href="#">
+                <span class="visually-hidden">Twitter</span>
+              </a>
+            </li>
+          </ul>
           <a href="https://htmlacademy.ru" class="footer-social-copyright">
             <span class="visually-hidden">HTML Academy</span>
           </a>
-        </li>
-      </ul>
-
+        </div>
+      </div>
+      </div>
     </footer>
 
     <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
