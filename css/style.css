@@ -644,6 +644,32 @@ a {
   padding: 0 431px 151px 116px;
 }
 
+.benefits {
+  border-right: 7px solid black;
+  justify-content: center;
+}
+
+.benefits-names {
+  padding-right: 117px;
+}
+
+.benefits-names:nth-child(2) {
+  margin: 25px 0;
+}
+
+.benefits-names label {
+  width: 160px;
+  display: inline-block;
+  vertical-align: middle;
+
+  font-family: 'Gilroy';
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.33;
+  letter-spacing: 3.6px;
+  text-align: center;
+}
+
 .benefits-list h3 {
   font-family: Gilroy;
   font-size: 47.5px;
