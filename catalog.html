@@ -9,29 +9,30 @@
   </head>
   <body>
     <header class="main-header">
-      <nav class="main-navigation">
+      <nav>
         <a class="header-logo inner-logo" href="index.html">
           <img src="img/logo.svg" alt="Device Logo" height="36" width="164">
         </a>
-        <form action="https://echo.htmlacademy.ru" class="site-search">
-          <input type="search" id="site-search" name="search" placeholder="Поиск по сайту" class="site-search-input">
-          <button type="submit" class="site-search-btn btn-reset">Найти</button>
-        </form>
+        <div class="main-navigation fl-container">
+          <form action="https://echo.htmlacademy.ru" class="site-search">
+            <input type="search" id="site-search" name="search" placeholder="Поиск по сайту" class="site-search-input">
+            <button type="submit" class="site-search-btn btn-reset">Найти</button>
+          </form>
+          <ul class="main-user-nav lst-reset fl-container">
+            <li class="main-user-item">
+              <a href="#">Валентин Петухов</a>
+              <a href="#">Выйти</a>
+            </li>
+            <li class="main-user-item"><a href="#">Сравнить</a></li>
+            <li class="main-user-item"><a href="#">Корзина</a></li>
+          </ul>
+        </div>
 
-        <ul class="main-user-nav lst-reset">
-          <li class="main-user-item">
-            <a href="#">Валентин Петухов</a>
-            <a href="#">Выйти</a>
-          </li>
-          <li class="main-user-item"><a href="#">Сравнить</a></li>
-          <li class="main-user-item"><a href="#">Корзина</a></li>
-        </ul>
-
-        <ul class="main-site-list lst-reset">
+        <ul class="main-site-list lst-reset fl-container">
           <li class="main-site-item">
             <a class="main-submenu-toggle">Каталог товаров</a>
             <div class="main-submenu-container">
-              <ul class="main-submenu lst-reset">
+              <ul class="main-submenu fl-container lst-reset">
                 <li class="main-submenu-item"><a href="#">Виртуальная реальность</a></li>
                 <li class="main-submenu-item"><a href="#">Фитнес-браслеты</a></li>
                 <li class="main-submenu-item"><a href="#">Квадрокоптеры</a></li>
@@ -55,9 +56,9 @@
         <li><a href="#">Каталог</a></li>
         <li><a class="active">Моноподы для селфи</a></li>
       </ul>
-      <div class="container wrapper">
+      <div class="fl-container wrapper">
         <form class="filter" method="post" action="https://echo.htmlacademy.ru">
-          <fieldset class="color">
+          <fieldset class="color fl-container fld-column">
             <legend>Цвет</legend>
             <label for="color-black">
               <input type="checkbox" name="color-value" id="color-black" value="black" checked>
@@ -80,7 +81,7 @@
               <span>Розовый</span>
             </label>
           </fieldset>
-          <fieldset class="bluetooth">
+          <fieldset class="bluetooth fl-container fld-column">
             <legend>Bluetooth</legend>
             <label for="bluetooth-yes">
               <input type="radio" name="bluetooth-value" id="bluetooth-yes" checked value="yes">
@@ -93,7 +94,7 @@
           </fieldset>
           <button type="submit" class="btn-reset btn">Показать</button>
         </form>
-        <ul class="item-list">
+        <ul class="item-list fl-container flw-wrap">
           <li class="item-card">
             <div class="item-container">
               <img src="img/item-1.jpg" alt="Карточка товара" height="380" width="360">
@@ -168,9 +169,9 @@
 
     <footer class="main-footer">
       <div class="wrapper footer-container">
-        <nav>
-          <a class="footer-logo inner-logo" href="index.html">
-            <img src="img/logo-footer.svg" alt="Device Logo" height="36" width="164">
+        <nav class="fl-container">
+          <a class="footer-logo logo">
+            <img src="img/logo-footer.svg" alt="Device Logo" height="36" width="163">
           </a>
           <ul class="footer-user-nav lst-reset">
             <li class="footer-user-item">
@@ -180,15 +181,17 @@
             <li class="footer-user-item"><a href="#">Сравнить</a></li>
             <li class="footer-user-item"><a href="#">Корзина</a></li>
           </ul>
+        </nav>
+        <div class="fl-container footer-nav">
+          <a href="https://goo.gl/maps/woREYKRREx12" class="footer-nav-address">г. Москва, ул. Строителей, 15</a>
           <ul class="footer-nav-list lst-reset">
-            <li><a href="https://goo.gl/maps/woREYKRREx12" class="footer-nav-address">г. Москва, ул. Строителей, 15</a></li>
             <li class="footer-nav-item"><a href="#">Доставка</a></li>
             <li class="footer-nav-item"><a href="#">Гарантия</a></li>
             <li class="footer-nav-item"><a href="#">Контакты</a></li>
-            <li><a href="tel:+74954959595" class="footer-nav-phone">Тел: +7(495)495-95-95</a></li>
           </ul>
-        </nav>
-        <div class="footer-social">
+          <a href="tel:+74954959595" class="footer-nav-phone">Тел: +7(495)495-95-95</a>
+        </div>
+        <div class="footer-social fl-container">
           <ul class="footer-social-list lst-reset">
             <li class="footer-social-item">
               <a href="#">
@@ -210,7 +213,6 @@
             <span class="visually-hidden">HTML Academy</span>
           </a>
         </div>
-      </div>
       </div>
     </footer>
 
