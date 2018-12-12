@@ -48,16 +48,24 @@
         </ul>
       </nav>
     </header>
-
+    <h1 class="wrapper">Моноподы для селфи</h1>
+    <ul class="breadcrumb wrapper">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="#">Каталог</a></li>
+      <li><a class="active">Моноподы для селфи</a></li>
+    </ul>
     <main class="inner-main">
-      <h1>Моноподы для селфи</h1>
-      <ul class="breadcrumb wrapper">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="#">Каталог</a></li>
-        <li><a class="active">Моноподы для селфи</a></li>
-      </ul>
       <div class="fl-container wrapper">
         <form class="filter" method="post" action="https://echo.htmlacademy.ru">
+          <h3>Фильтр:</h3>
+          <fieldset class="price fl-container fld-column">
+            <legend>
+              Стоимость
+            </legend>
+            <label for="price-value">
+              <input type="range" id="price-value" min="0" max="5000" name="price">
+            </label>
+          </fieldset>
           <fieldset class="color fl-container fld-column">
             <legend>Цвет</legend>
             <label for="color-black">
@@ -94,76 +102,96 @@
           </fieldset>
           <button type="submit" class="btn-reset btn">Показать</button>
         </form>
-        <ul class="item-list fl-container flw-wrap">
-          <li class="item-card">
-            <div class="item-container">
-              <img src="img/item-1.jpg" alt="Карточка товара" height="380" width="360">
-              <form action="echo.htmlacademy.ru" class="cart-add">
-                <button type="button" class="cart-add-btn btn-reset btn">
-                  В корзину
-                </button>
-                <button type="button" class="btn-reset btn-compare">
-                  Добавить к сравнению
-                </button>
-              </form>
-            </div>
-            <dl>
-              <dt>Любительская селфи-палка</dt>
-              <dd>500 руб.</dd>
-            </dl>
-          </li>
-          <li class="item-card">
-            <div class="item-container">
-              <img src="img/item-2.jpg" alt="Карточка товара" height="380" width="360">
-              <form action="echo.htmlacademy.ru">
-                <button type="button" class="cart-add-btn btn-reset btn">
-                  В корзину
-                </button>
-                <button type="button" class="btn-reset btn-compare">
-                  Добавить к сравнению
-                </button>
-              </form>
-            </div>
-            <dl>
-              <dt>Профессиональная <br />селфи-палка</dt>
-              <dd>1 500 руб.</dd>
-            </dl>
-          </li>
-          <li class="item-card">
-            <div class="item-container">
-              <img src="img/item-3.jpg" alt="Карточка товара" height="380" width="360">
-              <form action="echo.htmlacademy.ru">
-                <button type="button" class="cart-add-btn btn-reset btn">
-                  В корзину
-                </button>
-                <button type="button" class="btn-reset btn-compare">
-                  Добавить к сравнению
-                </button>
-              </form>
-            </div>
-            <dl>
-              <dt>Непотопляемая селфи-палка</dt>
-              <dd>2 500 руб.</dd>
-            </dl>
-          </li>
-          <li class="item-card">
-            <div class="item-container">
-              <img src="img/item-4.jpg" alt="Карточка товара" height="380" width="360">
-              <form action="echo.htmlacademy.ru">
-                <button type="button" class="cart-add-btn btn-reset btn">
-                  В корзину
-                </button>
-                <button type="button" class="btn-reset btn-compare">
-                  Добавить к сравнению
-                </button>
-              </form>
-            </div>
-            <dl>
-              <dt>Селфи-палка "Следуй за мной"</dt>
-              <dd>4900 руб.</dd>
-            </dl>
-          </li>
-        </ul>
+        <div class="item-list-container">
+          <div class="sort fl-container">
+            <h3>Сортировка:</h3>
+            <ul class="sort-list lst-reset fl-container">
+              <li>
+                <button type="button" class="btn-reset">По цене</button>
+              </li>
+              <li>
+                <button type="button" class="btn-reset">По типу</button>
+              </li>
+              <li>
+                <button type="button" class="btn-reset">По популярности</button>
+              </li>
+            </ul>
+            <p class="sort-control">
+              <a href="#" class="sort-arrow sort-arrow-up">по возрастанию</a>
+              <a href="#" class="sort-arrow sort-arrow-down">по убыванию</a>
+            </p>
+          </div>
+          <ul class="item-list fl-container flw-wrap">
+            <li class="item-card">
+              <div class="item-container">
+                <img src="img/item-1.jpg" alt="Карточка товара" height="380" width="360">
+                <form action="echo.htmlacademy.ru" class="cart-add">
+                  <button type="button" class="cart-add-btn btn-reset btn">
+                    В корзину
+                  </button>
+                  <button type="button" class="btn-reset btn-compare">
+                    Добавить к сравнению
+                  </button>
+                </form>
+              </div>
+              <dl>
+                <dt>Любительская селфи-палка</dt>
+                <dd>500 руб.</dd>
+              </dl>
+            </li>
+            <li class="item-card">
+              <div class="item-container">
+                <img src="img/item-2.jpg" alt="Карточка товара" height="380" width="360">
+                <form action="echo.htmlacademy.ru">
+                  <button type="button" class="cart-add-btn btn-reset btn">
+                    В корзину
+                  </button>
+                  <button type="button" class="btn-reset btn-compare">
+                    Добавить к сравнению
+                  </button>
+                </form>
+              </div>
+              <dl>
+                <dt>Профессиональная <br />селфи-палка</dt>
+                <dd>1 500 руб.</dd>
+              </dl>
+            </li>
+            <li class="item-card">
+              <div class="item-container">
+                <img src="img/item-3.jpg" alt="Карточка товара" height="380" width="360">
+                <form action="echo.htmlacademy.ru">
+                  <button type="button" class="cart-add-btn btn-reset btn">
+                    В корзину
+                  </button>
+                  <button type="button" class="btn-reset btn-compare">
+                    Добавить к сравнению
+                  </button>
+                </form>
+              </div>
+              <dl>
+                <dt>Непотопляемая селфи-палка</dt>
+                <dd>2 500 руб.</dd>
+              </dl>
+            </li>
+            <li class="item-card">
+              <div class="item-container">
+                <img src="img/item-4.jpg" alt="Карточка товара" height="380" width="360">
+                <form action="echo.htmlacademy.ru">
+                  <button type="button" class="cart-add-btn btn-reset btn">
+                    В корзину
+                  </button>
+                  <button type="button" class="btn-reset btn-compare">
+                    Добавить к сравнению
+                  </button>
+                </form>
+              </div>
+              <dl>
+                <dt>Селфи-палка "Следуй за мной"</dt>
+                <dd>4900 руб.</dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
       </div>
     </main>
 
