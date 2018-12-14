@@ -48,10 +48,10 @@
         </ul>
       </nav>
     </header>
-    <h1 class="wrapper">Моноподы для селфи</h1>
-    <ul class="breadcrumb wrapper">
+    <h1 class="container">Моноподы для селфи</h1>
+    <ul class="breadcrumb container">
       <li><a href="index.html">Главная</a></li>
-      <li><a href="#">Каталог</a></li>
+      <li><a href="#">Каталог товаров</a></li>
       <li><a class="active">Моноподы для селфи</a></li>
     </ul>
     <main class="inner-main">
@@ -62,7 +62,7 @@
             <legend>
               Стоимость
             </legend>
-            <label for="price-value">
+            <label for="price-value" class="price-value">
               <input type="range" id="price-value" min="0" max="5000" name="price">
             </label>
           </fieldset>
@@ -100,20 +100,20 @@
               <span>Нет</span>
             </label>
           </fieldset>
-          <button type="submit" class="btn-reset btn">Показать</button>
+          <button type="submit" class="btn-reset btn filter-btn">Показать</button>
         </form>
         <div class="item-list-container">
           <div class="sort fl-container">
             <h3>Сортировка:</h3>
-            <ul class="sort-list lst-reset fl-container">
-              <li>
-                <button type="button" class="btn-reset">По цене</button>
+            <ul class="sort-list lst-reset">
+              <li class="sort-list-item">
+                <button type="button" class="btn-reset sort-list-btn">По цене</button>
               </li>
-              <li>
-                <button type="button" class="btn-reset">По типу</button>
+              <li class="sort-list-item">
+                <button type="button" class="btn-reset sort-list-btn">По типу</button>
               </li>
-              <li>
-                <button type="button" class="btn-reset">По популярности</button>
+              <li class="sort-list-item">
+                <button type="button" class="btn-reset sort-list-btn">По популярности</button>
               </li>
             </ul>
             <p class="sort-control">
@@ -134,7 +134,7 @@
                   </button>
                 </form>
               </div>
-              <dl>
+              <dl class="fl-container">
                 <dt>Любительская селфи-палка</dt>
                 <dd>500 руб.</dd>
               </dl>
@@ -151,12 +151,12 @@
                   </button>
                 </form>
               </div>
-              <dl>
-                <dt>Профессиональная <br />селфи-палка</dt>
+              <dl class="fl-container">
+                <dt>Профессиональная селфи-палка</dt>
                 <dd>1 500 руб.</dd>
               </dl>
             </li>
-            <li class="item-card">
+            <li class="item-card ">
               <div class="item-container">
                 <img src="img/item-3.jpg" alt="Карточка товара" height="380" width="360">
                 <form action="echo.htmlacademy.ru">
@@ -168,12 +168,12 @@
                   </button>
                 </form>
               </div>
-              <dl>
+              <dl class="fl-container">
                 <dt>Непотопляемая селфи-палка</dt>
                 <dd>2 500 руб.</dd>
               </dl>
             </li>
-            <li class="item-card">
+            <li class="item-card item-card-new">
               <div class="item-container">
                 <img src="img/item-4.jpg" alt="Карточка товара" height="380" width="360">
                 <form action="echo.htmlacademy.ru">
@@ -185,10 +185,25 @@
                   </button>
                 </form>
               </div>
-              <dl>
-                <dt>Селфи-палка "Следуй за мной"</dt>
-                <dd>4900 руб.</dd>
+              <dl class="fl-container">
+                <dt>Селфи-палка «Следуй за мной»</dt>
+                <dd>4 900 руб.</dd>
               </dl>
+            </li>
+          </ul>
+          <ul class="pagination-list fl-container lst-reset">
+            <li class="pagination-item">
+              <a href="#">назад</a>
+            </li>
+            <li class="pagination-item">
+              <ul class="pagination-numbers fl-container lst-reset">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+              </ul>
+            </li>
+            <li class="pagination-item">
+              <a href="#">вперед</a>
             </li>
           </ul>
         </div>
@@ -217,7 +232,7 @@
             <li class="footer-nav-item"><a href="#">Гарантия</a></li>
             <li class="footer-nav-item"><a href="#">Контакты</a></li>
           </ul>
-          <a href="tel:+74954959595" class="footer-nav-phone">Тел: +7(495)495-95-95</a>
+          <a href="tel:+74954959595" class="footer-nav-phone">Тел.: +7 (495) 495-95-95</a>
         </div>
         <div class="footer-social fl-container">
           <ul class="footer-social-list lst-reset">
