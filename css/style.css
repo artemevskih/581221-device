@@ -897,12 +897,9 @@ a {
 /********************* /partners *********************/
 .info,
 .contacts {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+  justify-content: space-between;
   box-sizing: border-box;
+  padding-bottom: 90px;
 }
 
 .info {
@@ -999,14 +996,21 @@ a {
 
 .form-modal {
   width: 960px;
+  height: 590px;
   box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 1);
 
   margin: 0 auto;
   margin-bottom: 10px;
+  z-index: 3;
 
   padding: 98px 100px 92px 100px;
 
-  position: relative;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+
+  margin: -295px 0 0 -480px;
 
   box-sizing: border-box;
 }
@@ -1101,8 +1105,14 @@ a {
 /********************** map-popup **********************/
 .map-popup {
   width: 960px;
-  position: relative;
-  margin: 0 auto;
+  height: 559px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  margin: -280px 0 0 -480px;
+  z-index: 3;
 }
 
 
@@ -1297,7 +1307,7 @@ h1 {
 
 .breadcrumb {
   list-style-type: none;
-  padding: 25px 0 53px 0;
+  padding: 25px 0 46px 0;
 }
 
 .breadcrumb li {
@@ -1332,7 +1342,15 @@ h1 {
 }
 
 .inner-main {
-  padding: 0 0 77px 0;
+  padding: 7px 0 77px 0;
+  background-image:
+    linear-gradient(to right, #eee 33.5%, #fff 33.5%),
+    linear-gradient(to right, #dbdbdb 33.5%, #eee 33.5%);
+  background-repeat: no-repeat;
+  background-position:
+    0 70px,
+    0 0;
+  background-size: 100%;
 }
 
 /* filter */
@@ -1391,6 +1409,7 @@ h1 {
 
 .sort {
   align-items: center;
+  padding-bottom: 15px;
 }
 
 .sort-control {
@@ -1550,7 +1569,7 @@ h1 {
 
 .item-list {
   list-style-type: none;
-  padding: 76px 0 0 0;
+  padding: 61px 0 0 0;
   margin: 0;
   width: 100%;
   background-color: #fff;
