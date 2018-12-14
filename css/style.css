@@ -1342,10 +1342,10 @@ h1 {
 }
 
 .inner-main {
-  padding: 7px 0 77px 0;
+  padding: 0 0 77px 0;
   background-image:
-    linear-gradient(to right, #eee 33.5%, #fff 33.5%),
-    linear-gradient(to right, #dbdbdb 33.5%, #eee 33.5%);
+    linear-gradient(to right, #eee 36.75%, #fff 36.75%),
+    linear-gradient(to right, #dbdbdb 36.75%, #eee 36.75%);
   background-repeat: no-repeat;
   background-position:
     0 70px,
@@ -1356,12 +1356,11 @@ h1 {
 /* filter */
 
 .filter {
-  padding: 0 45px 0 60px;
+  padding: 7px 45px 0 60px;
   flex-basis: 33.5%;
   position: relative;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  background-image: linear-gradient(to bottom, #dbdbdb 70px, #eee 70px);
 }
 
 /*
@@ -1409,7 +1408,7 @@ h1 {
 
 .sort {
   align-items: center;
-  padding-bottom: 15px;
+  padding: 7px 0 15px 0;
 }
 
 .sort-control {
