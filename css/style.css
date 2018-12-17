@@ -1342,23 +1342,39 @@ h1 {
 }
 
 .inner-main {
-  padding: 0 0 77px 0;
-  background-image:
-    linear-gradient(to right, #eee 36.75%, #fff 36.75%),
-    linear-gradient(to right, #dbdbdb 36.75%, #eee 36.75%);
-  background-repeat: no-repeat;
-  background-position:
-    0 70px,
-    0 0;
-  background-size: 100%;
+  position: relative;
 }
+
+.inner-main:before,
+.inner-main:after {
+  content: '';
+  position: absolute;
+  width: calc((100% - 1160px) / 2);
+  height: 100%;
+  z-index: -1;
+}
+
+.inner-main:before {
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(to bottom, #dbdbdb 70px, #eee 70px);
+}
+
+.inner-main:after {
+  right: 0;
+  top: 0;
+  background-image: linear-gradient(to bottom, #dbdbdb 70px, #fff 70px);
+}
+
 
 /* filter */
 
 .filter {
-  padding: 7px 45px 0 60px;
-  flex-basis: 33.5%;
+  padding: 7px 70px 0 60px;
+  flex-basis: 36%;
   position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-image: linear-gradient(to bottom, #dbdbdb 70px, #eee 70px);
 }
@@ -1610,10 +1626,12 @@ h1 {
 
 .item-list-container {
   width: 100%;
-  padding: 0 0 0 95px;
+  padding: 0 0 0 71px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  background-image: linear-gradient(to bottom, #dbdbdb 70px, #fff 70px);
+  margin-left: -1px;
 }
 
 .sort-list {
@@ -1736,7 +1754,7 @@ h1 {
   justify-content: space-between;
   padding: 24px 27px 22px 28px;
   background-color: rgba(70, 70, 70, 0.08);
-  margin-top: -13px;
+ margin: -13px 0 77px 0;
 }
 
 .pagination-item a {
