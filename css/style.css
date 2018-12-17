@@ -1092,10 +1092,15 @@ a {
   right: 22px;
 
   opacity: 0.5;
+  z-index: 3;
 }
 
 .form-modal-submit {
   width: 200px;
+}
+
+.form-modal-show {
+  display: block;
 }
 
 /********************** /form-modal **********************/
@@ -1110,6 +1115,26 @@ a {
 
   margin: -280px 0 0 -480px;
   z-index: 3;
+}
+
+.map-popup-show {
+  display: block;
+}
+
+.map-popup p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  margin: 0;
+}
+
+.map-popup iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
 }
 
 

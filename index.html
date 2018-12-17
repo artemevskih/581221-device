@@ -5,7 +5,7 @@
     <title>HTML Academy: Девайс</title>
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"> -->
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
@@ -232,11 +232,11 @@
       <section class="contacts">
         <h3>Контакты</h3>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <a href="img/map-big.jpg" class="contacts-map">
+        <a href="img/map-big.jpg" class="contacts-map js-map">
           <img src="img/map.jpg" alt="Карта (уменьшенная)" width="560" height="220" class="map-preview">
           <!-- <span class="visually-hidden">Увеличить карту</span> -->
         </a>
-        <a href="#" title="Напишите нам" class="btn contacts-btn">Напишите нам</a>
+        <a href="#" title="Напишите нам" class="btn contacts-btn js-write-us">Напишите нам</a>
       </section>
     </div>
 
@@ -288,15 +288,16 @@
 
     <section class="map-popup" hidden>
       <h3 class="visually-hidden">Увеличенная карта</h3>
+      <iframe src="https://yandex.ru/map-widget/v1/-/CBFd7ZWs3A" width="960" height="559" frameborder="1" allowfullscreen="true"></iframe></iframe>
       <p>
         <img src="img/map-big.jpg" alt="Карта (увеличенная)" height="559" width="960">
       </p>
-      <button class="modal-close btn-reset" type="button">
+      <button class="modal-close btn-reset js-map-close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
     </section>
 
-    <section class="form-modal" hidden>
+    <section class="form-modal js-form-modal" hidden>
       <h3 class="visually-hidden">Форма обратной связи:</h3>
       <form action="https://echo.htmlacademy.ru" class="writeus-modal" method="post">
         <ul class="lst-reset fl-container form-modal-list flw-wrap">
@@ -314,11 +315,96 @@
           </li>
         </ul>
         <button type="submit" id="writeus-submit" class="form-modal-submit btn-reset btn">Отправить</button>
-        <button class="modal-close btn-reset" type="button">
+        <button class="modal-close js-modal-close btn-reset" type="button">
           <span class="visually-hidden">Закрыть</span>
         </button>
       </form>
     </section>
+
+    <script>
+      var link = document.querySelector(".js-write-us");
+
+      var popup = document.querySelector(".js-form-modal");
+      var close = document.querySelector(".js-modal-close");
+
+      var form = popup.querySelector("form");
+      var login = popup.querySelector("[name=name]");
+      var email = popup.querySelector("[name=email]");
+      var text = popup.querySelector("[name=text]");
+
+      var isStorageSupport = true;
+      var storage = "";
+      var storageEmail = "";
+
+      try {
+        storage = localStorage.getItem("login");
+        storageEmail = localStorage.getItem("email");
+      } catch (err) {
+        isStorageSupport = false;
+      }
+
+//    console.log(isStorageSupport, storage, storageEmail);
+
+      link.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.add("form-modal-show");
+
+        if (storage) {
+          if (storageEmail) {
+            login.value = storage;
+            email.value = storageEmail;
+            text.focus();
+          } else {
+            login.value = storage;
+            email.focus();
+          }
+        } else {
+          login.focus();
+        }
+      });
+
+      close.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.remove("form-modal-show");
+      });
+
+      form.addEventListener("submit", function (evt) {
+        if (!login.value || !email.value) {
+          evt.preventDefault();
+          console.log('Нужно ввести имя и email');
+        } else {
+          if (isStorageSupport) {
+            localStorage.setItem("login", login.value);
+            localStorage.setItem("email", email.value);
+          }
+        }
+      });
+
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+          if (popup.classList.contains("form-modal-show")) {
+            popup.classList.remove("form-modal-show");
+          }
+        }
+      });
+
+      var mapLink = document.querySelector(".js-map");
+      var mapPopup = document.querySelector(".map-popup");
+      var mapClose = mapPopup.querySelector(".js-map-close");
+
+//    console.log(mapClose);
+
+      mapLink.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        mapPopup.classList.add("map-popup-show");
+      });
+
+      mapClose.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        mapPopup.classList.remove("map-popup-show");
+      });
+    </script>
 
         <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
   </body>
