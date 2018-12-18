@@ -300,8 +300,7 @@ a {
   line-height: 44px;
 }
 
-.site-search-input:focus ~ .site-search-btn,
-.site-search-input:hover ~ .site-search-btn {
+.site-search-input:focus ~ .site-search-btn {
   position: static;
 }
 
@@ -785,6 +784,16 @@ a {
   margin: 0;
 }
 
+.benefits-title:active {
+  background-color: black;
+}
+
+.benefits-title:active label {
+  background-color: black;
+  color: #f7e184;
+  background-image: none;
+}
+
 .benefits-title:nth-child(2) {
   margin: 24px 0;
 }
@@ -800,6 +809,8 @@ a {
   line-height: 40px;
   letter-spacing: 3.6px;
   text-align: center;
+
+  cursor: pointer;
 }
 
 .benefits-item {
@@ -1111,6 +1122,11 @@ a {
 
 .form-modal-show {
   display: block;
+  animation: bounce 0.6s;
+}
+
+.form-modal-error {
+  animation: shake 0.6s;
 }
 
 /********************** /form-modal **********************/
@@ -1129,6 +1145,7 @@ a {
 
 .map-popup-show {
   display: block;
+  animation: bounce 0.6s;
 }
 
 .map-popup p {
@@ -1149,6 +1166,51 @@ a {
 
 
 /********************** /map-popup **********************/
+
+/******************* modal-animation ********************/
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+
+/******************* /modal-animation *******************/
 
 /********************** footer **********************/
 
