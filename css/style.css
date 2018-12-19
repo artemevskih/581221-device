@@ -874,10 +874,8 @@ a {
 /********************* partners *********************/
 
 .partners {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding-top: 95px;
-  padding-bottom: 92px;
+  justify-content: space-between;
+  padding: 95px 25px 92px 25px;
 }
 
 .partner-link img {
@@ -951,7 +949,7 @@ a {
 .contacts-btn,
 .info-btn {
   display: block;
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 40px;
@@ -1422,7 +1420,7 @@ h1 {
 
 .filter h3,
 .sort h3 {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 1.5;
@@ -1504,6 +1502,10 @@ h1 {
 
 .filter input {
   display: none;
+}
+
+.filter label {
+  cursor: pointer;
 }
 
 .color span,
@@ -1685,7 +1687,7 @@ h1 {
   border-radius: 50%;
 
   opacity: 0.2;
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 14px;
   font-weight: 800;
   line-height: 61px;
@@ -1724,7 +1726,7 @@ h1 {
 }
 
 .sort-list-btn {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.29;
@@ -1832,7 +1834,7 @@ h1 {
 
 .pagination-item a {
   text-transform: uppercase;
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 70px;
