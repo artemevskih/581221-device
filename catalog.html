@@ -62,7 +62,7 @@
               Стоимость
             </legend>
             <label for="price-value" class="price-value">
-              <input type="range" id="price-value" min="0" max="5000" name="price">
+              <input type="range" id="price-value" min="0" max="10000" name="price">
               <span class="price-min">от 0</span>
               <span class="price-max">до 5000</span>
             </label>
@@ -92,8 +92,8 @@
           </fieldset>
           <fieldset class="bluetooth fl-container fld-column">
             <legend>Bluetooth</legend>
-            <label for="bluetooth-yes">
-              <input type="radio" name="bluetooth-value" id="bluetooth-yes" checked value="yes">
+            <label for="bluetooth-true">
+              <input type="radio" name="bluetooth-value" id="bluetooth-true" checked value="true">
               <span>Есть</span>
             </label>
             <label for="bluetooth-no">
@@ -103,7 +103,7 @@
           </fieldset>
           <button type="submit" class="btn-reset btn filter-btn">Показать</button>
         </form>
-        <div class="item-list-container wrapper">
+        <div class="item-list-container">
           <div class="sort fl-container">
             <h3>Сортировка:</h3>
             <ul class="sort-list lst-reset">
