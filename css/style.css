@@ -49,6 +49,8 @@
   background: none;
   cursor: pointer;
   outline: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* сброс списков */
@@ -1772,6 +1774,7 @@ h1 {
   font-weight: normal;
   line-height: 1.29;
   letter-spacing: normal;
+  padding: 0 6px;
 }
 
 .item-list dl {
