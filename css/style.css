@@ -694,6 +694,10 @@ a {
   opacity: 0.3;
 }
 
+.features-item:active .features-img {
+  background-color: #f0c52e;
+}
+
 /*
 .features-item:first-child a:first-of-type {
   background-image: url(../img/popular-1.svg);
