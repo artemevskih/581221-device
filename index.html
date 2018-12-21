@@ -13,7 +13,7 @@
           <img src="img/logo.svg" alt="Device Logo" height="36" width="164">
         </a>
         <div class="main-navigation fl-container">
-          <form action="https://echo.htmlacademy.ru" class="site-search">
+          <form action="https://echo.htmlacademy.ru" class="site-search js-search">
             <input type="search" id="site-search" name="search" placeholder="Поиск по сайту" class="site-search-input">
             <button type="submit" class="site-search-btn btn-reset">Найти</button>
           </form>
@@ -26,7 +26,7 @@
         </div>
         <ul class="main-site-list lst-reset fl-container">
           <li class="main-site-item">
-            <a class="main-submenu-toggle">Каталог товаров</a>
+            <a href="#" class="main-submenu-toggle">Каталог товаров</a>
             <ul class="main-submenu fl-container lst-reset">
               <li class="main-submenu-item"><a href="#">Виртуальная реальность</a></li>
               <li class="main-submenu-item"><a href="#">Фитнес-браслеты</a></li>
@@ -46,9 +46,9 @@
     <main class="wrapper index-main">
       <div class="wrapper">
         <div class="slider">
-          <input type="radio" class="slider-control-1" name="slider-control" id="slider-control-1"  hidden checked>
-          <input type="radio" class="slider-control-2" name="slider-control" id="slider-control-2" hidden>
-          <input type="radio" class="slider-control-3" name="slider-control" id="slider-control-3" hidden>
+          <input type="radio" class="visually-hidden slider-control-1" name="slider-control" id="slider-control-1"  checked>
+          <input type="radio" class="visually-hidden slider-control-2" name="slider-control" id="slider-control-2" >
+          <input type="radio" class="visually-hidden slider-control-3" name="slider-control" id="slider-control-3" >
           <div class="slider-controls">
             <label for="slider-control-1"></label>
             <label for="slider-control-2"></label>
@@ -155,22 +155,22 @@
 
     <section class="benefits">
       <div class="wrapper fl-container">
-        <input name="benefits-control" class="benefits-control-1" type="radio" id="benefits-1" hidden checked>
-        <input name="benefits-control" class="benefits-control-2" type="radio" id="benefits-2" hidden>
-        <input name="benefits-control" class="benefits-control-3" type="radio" id="benefits-3" hidden>
+        <input name="benefits-control" class="visually-hidden benefits-control-1" type="radio" id="benefits-1" checked>
+        <input name="benefits-control" class="visually-hidden benefits-control-2" type="radio" id="benefits-2">
+        <input name="benefits-control" class="visually-hidden benefits-control-3" type="radio" id="benefits-3">
         <ul class="benefits-titles lst-reset fl-container fld-column">
           <li class="benefits-title benefits-title-1">
-            <label class="btn benefits-label-1" for="benefits-1">
+            <label class="btn benefits-label-1" for="benefits-1" tabindex="0">
               Доставка
             </label>
           </li>
           <li class="benefits-title benefits-title-2">
-            <label class="btn benefits-label-2" for="benefits-2">
+            <label class="btn benefits-label-2" for="benefits-2" tabindex="0">
               Гарантия
             </label>
           </li>
           <li class="benefits-title benefits-title-3">
-            <label class="btn benefits-label-3" for="benefits-3">
+            <label class="btn benefits-label-3" for="benefits-3" tabindex="0">
               Кредит
             </label>
           </li>
@@ -261,7 +261,6 @@
           <a href="tel:+74954959595" class="footer-nav-phone">Тел.: +7 (495) 495-95-95</a>
         </div>
         <div class="footer-social fl-container wrapper">
-          <hr />
           <ul class="footer-social-list lst-reset">
             <li class="footer-social-item">
               <a href="#">
@@ -322,19 +321,17 @@
     </section>
 
     <script>
-      var link = document.querySelector(".js-write-us");
-
-      var popup = document.querySelector(".js-form-modal");
-      var close = document.querySelector(".js-modal-close");
-
-      var form = popup.querySelector("form");
-      var login = popup.querySelector("[name=name]");
-      var email = popup.querySelector("[name=email]");
-      var text = popup.querySelector("[name=text]");
-
-      var isStorageSupport = true;
-      var storage = "";
-      var storageEmail = "";
+      //----------- form-modal -----------//
+      var link = document.querySelector(".js-write-us"),
+          popup = document.querySelector(".js-form-modal"),
+          close = document.querySelector(".js-modal-close"),
+          form = popup.querySelector("form"),
+          login = popup.querySelector("[name=name]"),
+          email = popup.querySelector("[name=email]"),
+          text = popup.querySelector("[name=text]"),
+          isStorageSupport = true,
+          storage = "",
+          storageEmail = "";
 
       try {
         storage = localStorage.getItem("login");
@@ -342,8 +339,6 @@
       } catch (err) {
         isStorageSupport = false;
       }
-
-//    console.log(isStorageSupport, storage, storageEmail);
 
       link.addEventListener("click", function (evt) {
         evt.preventDefault();
@@ -393,12 +388,10 @@
           }
         }
       });
-
-      var mapLink = document.querySelector(".js-map");
-      var mapPopup = document.querySelector(".map-popup");
-      var mapClose = mapPopup.querySelector(".js-map-close");
-
-//    console.log(mapClose);
+      // ----------- map popup ------------- //
+      var mapLink = document.querySelector(".js-map"),
+          mapPopup = document.querySelector(".map-popup"),
+          mapClose = mapPopup.querySelector(".js-map-close");
 
       mapLink.addEventListener("click", function (evt) {
         evt.preventDefault();
@@ -416,6 +409,17 @@
           if (mapPopup.classList.contains("map-popup-show")) {
             mapPopup.classList.remove("map-popup-show");
           }
+        }
+      });
+
+      // --------- search ---------- //
+
+      var searchForm = document.querySelector(".js-search");
+          searchInput = searchForm.querySelector(".site-search-input");
+
+      searchForm.addEventListener("submit", function(evt) {
+        if (!searchInput.value) {
+          evt.preventDefault();
         }
       });
 

@@ -29,7 +29,7 @@
 
         <ul class="main-site-list inner-main-site-list lst-reset fl-container">
           <li class="main-site-item">
-            <a class="main-submenu-toggle">Каталог товаров</a>
+            <a href="#" class="main-submenu-toggle">Каталог товаров</a>
             <ul class="main-submenu fl-container lst-reset">
               <li class="main-submenu-item"><a href="#">Виртуальная реальность</a></li>
               <li class="main-submenu-item"><a href="#">Фитнес-браслеты</a></li>
@@ -62,7 +62,7 @@
               Стоимость
             </legend>
             <label for="price-value" class="price-value">
-              <input type="range" id="price-value" min="0" max="10000" name="price">
+              <input type="range" id="price-value" min="0" max="10000" name="price" class="visually-hidden">
               <span class="price-min">от 0</span>
               <span class="price-max">до 5000</span>
             </label>
@@ -70,34 +70,34 @@
           <fieldset class="color fl-container fld-column">
             <legend>Цвет</legend>
             <label for="color-black">
-              <input type="checkbox" name="color-value" id="color-black" value="black" checked>
+              <input class="visually-hidden" type="checkbox" name="color-value" id="color-black" value="black" checked>
               <span>Чёрный</span>
             </label>
             <label for="color-white">
-              <input type="checkbox" name="color-value" id="color-white" value="white">
+              <input class="visually-hidden" type="checkbox" name="color-value" id="color-white" value="white">
               <span>Белый</span>
             </label>
             <label for="color-blue">
-              <input type="checkbox" name="color-value" id="color-blue" value="blue" checked>
+              <input class="visually-hidden" type="checkbox" name="color-value" id="color-blue" value="blue" checked>
               <span>Синий</span>
             </label>
             <label for="color-red">
-              <input type="checkbox" name="color-value" id="color-red" value="red" checked>
+              <input class="visually-hidden" type="checkbox" name="color-value" id="color-red" value="red" checked>
               <span>Красный</span>
             </label>
             <label for="color-pink">
-              <input type="checkbox" name="color-value" id="color-pink" value="pink">
+              <input class="visually-hidden" type="checkbox" name="color-value" id="color-pink" value="pink">
               <span>Розовый</span>
             </label>
           </fieldset>
           <fieldset class="bluetooth fl-container fld-column">
             <legend>Bluetooth</legend>
             <label for="bluetooth-true">
-              <input type="radio" name="bluetooth-value" id="bluetooth-true" checked value="true">
+              <input class="visually-hidden" type="radio" name="bluetooth-value" id="bluetooth-true" checked value="true">
               <span>Есть</span>
             </label>
             <label for="bluetooth-no">
-              <input type="radio" name="bluetooth-value" id="bluetooth-no" value="no">
+              <input class="visually-hidden" type="radio" name="bluetooth-value" id="bluetooth-no" value="no">
               <span>Нет</span>
             </label>
           </fieldset>
@@ -108,13 +108,13 @@
             <h3>Сортировка:</h3>
             <ul class="sort-list lst-reset">
               <li class="sort-list-item sort-list-active">
-                <button type="button" class="btn-reset sort-list-btn">По цене</button>
+                <a href="#" class="btn-reset sort-list-btn">По цене</a>
               </li>
               <li class="sort-list-item">
-                <button type="button" class="btn-reset sort-list-btn">По типу</button>
+                <a href="#" class="btn-reset sort-list-btn">По типу</a>
               </li>
               <li class="sort-list-item">
-                <button type="button" class="btn-reset sort-list-btn">По популярности</button>
+                <a href="#" class="btn-reset sort-list-btn">По популярности</a>
               </li>
             </ul>
             <p class="sort-control">
@@ -125,15 +125,17 @@
           <ul class="item-list fl-container flw-wrap">
             <li class="item-card">
               <div class="item-container">
-                <img src="img/item-1.jpg" alt="Карточка товара" height="380" width="360">
-                <form action="echo.htmlacademy.ru" class="cart-add">
-                  <button type="button" class="cart-add-btn btn-reset btn">
+                <a href="#">
+                  <img src="img/item-1.jpg" alt="Карточка товара" height="380" width="360">
+                </a>
+                <div class="cart-add">
+                  <a href="#" class="cart-add-btn btn-reset btn">
                     В корзину
-                  </button>
-                  <button type="button" class="btn-reset btn-compare">
+                  </a>
+                  <a href="#" class="btn-reset btn-compare">
                     Добавить к сравнению
-                  </button>
-                </form>
+                  </a>
+                </div>
               </div>
               <dl class="fl-container">
                 <dt>Любительская селфи-палка</dt>
@@ -142,15 +144,17 @@
             </li>
             <li class="item-card">
               <div class="item-container">
-                <img src="img/item-2.jpg" alt="Карточка товара" height="380" width="360">
-                <form action="echo.htmlacademy.ru">
-                  <button type="button" class="cart-add-btn btn-reset btn">
+                <a href="#">
+                  <img src="img/item-2.jpg" alt="Карточка товара" height="380" width="360">
+                </a>
+                <div class="cart-add">
+                  <a href="#" class="cart-add-btn btn-reset btn">
                     В корзину
-                  </button>
-                  <button type="button" class="btn-reset btn-compare">
+                  </a>
+                  <a href="#" class="btn-reset btn-compare">
                     Добавить к сравнению
-                  </button>
-                </form>
+                  </a>
+                </div>
               </div>
               <dl class="fl-container">
                 <dt>Профессиональная селфи-палка</dt>
@@ -159,15 +163,17 @@
             </li>
             <li class="item-card ">
               <div class="item-container">
-                <img src="img/item-3.jpg" alt="Карточка товара" height="380" width="360">
-                <form action="echo.htmlacademy.ru">
-                  <button type="button" class="cart-add-btn btn-reset btn">
+                <a href="#">
+                  <img src="img/item-3.jpg" alt="Карточка товара" height="380" width="360">
+                </a>
+                <div class="cart-add">
+                  <a href="#" class="cart-add-btn btn-reset btn">
                     В корзину
-                  </button>
-                  <button type="button" class="btn-reset btn-compare">
+                  </a>
+                  <a href="#" class="btn-reset btn-compare">
                     Добавить к сравнению
-                  </button>
-                </form>
+                  </a>
+                </div>
               </div>
               <dl class="fl-container">
                 <dt>Непотопляемая селфи-палка</dt>
@@ -176,15 +182,17 @@
             </li>
             <li class="item-card item-card-new">
               <div class="item-container">
-                <img src="img/item-4.jpg" alt="Карточка товара" height="380" width="360">
-                <form action="echo.htmlacademy.ru">
-                  <button type="button" class="cart-add-btn btn-reset btn">
+                <a href="#">
+                  <img src="img/item-4.jpg" alt="Карточка товара" height="380" width="360">
+                </a>
+                <div class="cart-add">
+                  <a href="#" class="cart-add-btn btn-reset btn">
                     В корзину
-                  </button>
-                  <button type="button" class="btn-reset btn-compare">
+                  </a>
+                  <a href="#" class="btn-reset btn-compare">
                     Добавить к сравнению
-                  </button>
-                </form>
+                  </a>
+                </div>
               </div>
               <dl class="fl-container">
                 <dt>Селфи-палка «Следуй за мной»</dt>
@@ -198,9 +206,9 @@
             </li>
             <li class="pagination-item">
               <ul class="pagination-numbers fl-container lst-reset">
-                <li><a href="#" class="pagination-current">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
+                <li><a class="pagination-current">1</a></li>
+                <li><a class="pagination-number" href="#">2</a></li>
+                <li><a class="pagination-number" href="#">3</a></li>
               </ul>
             </li>
             <li class="pagination-item pagination-control">
@@ -236,7 +244,6 @@
           <a href="tel:+74954959595" class="footer-nav-phone">Тел.: +7 (495) 495-95-95</a>
         </div>
         <div class="footer-social fl-container">
-          <hr />
           <ul class="footer-social-list lst-reset">
             <li class="footer-social-item">
               <a href="#">

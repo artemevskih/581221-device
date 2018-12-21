@@ -122,7 +122,8 @@ a {
   transition: background 0.6s;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   background-size: 1px 100%;
 }
 
@@ -137,7 +138,7 @@ a {
 .footer-nav-item a:hover,
 .footer-social-list a:hover,
 .footer-social-item:last-child a:hover,
-.pagination-numbers a:hover,
+.pagination-number:hover,
 .footer-social-copyright:hover  {
   opacity: 0.6;
 }
@@ -155,7 +156,7 @@ a {
 
 .pagination-numbers .pagination-current,
 .sort-list .sort-list-active,
-.pagination-numbers a:active,
+.pagination-number:active,
 .sort-control .sort-arrow-active {
   opacity: 1;
 }
@@ -391,6 +392,10 @@ a {
 }
 
 .main-site-item:first-child:hover .main-submenu {
+  display: flex;
+}
+
+.main-site-item:first-child:focus-within .main-submenu {
   display: flex;
 }
 
@@ -1162,7 +1167,7 @@ a {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.75);
   z-index: -1;
-  animation: shadow 1s;
+  animation: shadow 0.9s;
 }
 
 .map-popup-show {
@@ -1224,7 +1229,9 @@ a {
   align-items: center;
 }
 
-.footer-social hr {
+.footer-social:before {
+  content: '';
+  display: block;
   width: 80px;
   height: 7px;
   padding: 0;
@@ -1543,10 +1550,6 @@ h1 {
   padding: 11px 0 30px 0;
 }
 
-.filter input {
-  display: none;
-}
-
 .filter label {
   cursor: pointer;
 }
@@ -1659,11 +1662,6 @@ h1 {
 
 .price-value:after {
   left: 53%;
-}
-
-.price input {
-  display: none;
-  width: 100%;
 }
 
 .price-value span {
@@ -1819,7 +1817,7 @@ h1 {
   position: relative;
 }
 
-.item-container form {
+.cart-add {
   display: none;
 
   position: absolute;
@@ -1833,11 +1831,17 @@ h1 {
   text-align: center;
 }
 
-.item-container:hover form {
+.item-container:hover .cart-add {
+  display: block;
+}
+
+.item-container:focus-within .cart-add  {
   display: block;
 }
 
 .cart-add-btn {
+  display: inline-block;
+  vertical-align: middle;
   margin-top: 50%;
   padding: 0 35px;
 }
@@ -1856,7 +1860,8 @@ h1 {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.btn-compare:hover {
+.btn-compare:hover,
+.btn-compare:focus {
   opacity: 1;
   color: rgba(0, 0, 0, 1);
 }
@@ -1905,6 +1910,10 @@ h1 {
 
 .pagination-numbers li {
   margin: 0 13.5px;
+}
+
+.pagination-current {
+  cursor: default;
 }
 
 .pagination-numbers a {
@@ -1960,11 +1969,11 @@ h1 {
   }
 
   25% {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.1);
   }
 
   50% {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   100% {
