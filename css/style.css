@@ -1040,7 +1040,6 @@ a {
 
 .form-modal {
   width: 960px;
-  height: 590px;
   box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 1);
 
   z-index: 2;
@@ -1057,7 +1056,7 @@ a {
 
 .writeus-modal {
   background-color: #fff;
-  padding: 98px 100px 92px 100px;
+  padding: 91px 100px 80px 100px;
 }
 
 .form-modal-item {
@@ -1070,8 +1069,8 @@ a {
 }
 
 .form-modal-item:last-child {
-  margin-top: 39px;
-  margin-bottom: 55px;
+  margin-top: 33px;
+  margin-bottom: 37px;
   flex-basis: 100%;
 }
 
@@ -1081,7 +1080,7 @@ a {
   font-size: 17.5px;
   font-weight: 800;
   line-height: 1.4;
-  margin-bottom: 13px;
+  margin-bottom: 7px;
   color: #000000;
 }
 
@@ -1110,7 +1109,7 @@ a {
 }
 
 .form-modal input {
-  padding: 16px 20px 17px 20px;
+  padding: 12px 20px 17px 20px;
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1123,7 +1122,7 @@ a {
   resize: none;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 16px 20px 0 20px;
+  padding: 12px 20px 17px 20px;
 }
 
 .modal-close {
@@ -1156,6 +1155,7 @@ a {
 
 .form-modal-submit {
   width: 200px;
+  letter-spacing: 3.6px;
 }
 
 .form-modal-show {
