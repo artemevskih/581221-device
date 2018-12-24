@@ -1913,8 +1913,8 @@ h1 {
   letter-spacing: 3.2px;
 }
 
-.pagination-control {
-  padding: 0 28px 0 29px;
+.pagination-control a {
+  padding: 25px 28px 25px 29px;
 }
 
 .pagination-control:hover,
