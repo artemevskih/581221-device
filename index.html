@@ -14,7 +14,7 @@
         </a>
         <div class="main-navigation fl-container">
           <form action="https://echo.htmlacademy.ru" class="site-search js-search">
-            <input type="search" id="site-search" name="search" placeholder="Поиск по сайту" class="site-search-input">
+            <input type="search" id="site-search" name="search" placeholder="Поиск по сайту" class="site-search-input" aria-label="Поиск по сайту">
             <button type="submit" class="site-search-btn btn-reset">Найти</button>
           </form>
 
@@ -46,9 +46,9 @@
     <main class="wrapper index-main">
       <div class="wrapper">
         <div class="slider">
-          <input type="radio" class="visually-hidden slider-control-1" name="slider-control" id="slider-control-1"  checked>
-          <input type="radio" class="visually-hidden slider-control-2" name="slider-control" id="slider-control-2" >
-          <input type="radio" class="visually-hidden slider-control-3" name="slider-control" id="slider-control-3" >
+          <input type="radio" class="visually-hidden slider-control-1" name="slider-control" id="slider-control-1" checked aria-label="Слайд номер 1">
+          <input type="radio" class="visually-hidden slider-control-2" name="slider-control" id="slider-control-2" aria-label="Слайд номер 2">
+          <input type="radio" class="visually-hidden slider-control-3" name="slider-control" id="slider-control-3" aria-label="Слайд номер 3">
           <div class="slider-controls">
             <label for="slider-control-1"></label>
             <label for="slider-control-2"></label>
@@ -266,9 +266,9 @@
 
     <section class="benefits">
       <div class="wrapper fl-container">
-        <input name="benefits-control" class="visually-hidden benefits-control-1" type="radio" id="benefits-1" checked>
-        <input name="benefits-control" class="visually-hidden benefits-control-2" type="radio" id="benefits-2">
-        <input name="benefits-control" class="visually-hidden benefits-control-3" type="radio" id="benefits-3">
+        <input name="benefits-control" class="visually-hidden benefits-control-1" type="radio" id="benefits-1" aria-label="Доставка" checked>
+        <input name="benefits-control" class="visually-hidden benefits-control-2" type="radio" id="benefits-2" aria-label="Гарантия">
+        <input name="benefits-control" class="visually-hidden benefits-control-3" type="radio" id="benefits-3" aria-label="Кредит">
         <ul class="benefits-titles lst-reset fl-container fld-column">
           <li class="benefits-title benefits-title-1">
             <label class="btn benefits-label-1 btn-reset" for="benefits-1" tabindex="0">
@@ -346,7 +346,7 @@
           <img src="img/map.jpg" alt="Карта (уменьшенная)" width="560" height="220" class="map-preview">
           <!-- <span class="visually-hidden">Увеличить карту</span> -->
         </a>
-        <a href="#" title="Напишите нам" class="btn contacts-btn js-write-us">Напишите нам</a>
+        <a href="writeus.html" title="Напишите нам" class="btn contacts-btn js-write-us">Напишите нам</a>
       </section>
     </div>
 
@@ -413,15 +413,15 @@
         <ul class="lst-reset fl-container form-modal-list flw-wrap">
           <li class="form-modal-item">
             <label for="writeus-name">Ваше имя:</label>
-            <input type="text" placeholder="Имя Фамилия" id="writeus-name" name="name">
+            <input type="text" placeholder="Имя Фамилия" id="writeus-name" name="name" aria-lable="Введите ваше имя">
           </li>
           <li class="form-modal-item">
             <label for="writeus-email">Ваш e-mail:</label>
-            <input type="email" id="writeus-email" placeholder="email@example.com" name="email">
+            <input type="email" id="writeus-email" placeholder="email@example.com" name="email" aria-lable="Введите ваш электронный адрес">
           </li>
           <li class="form-modal-item">
             <label for="writeus-textarea">Текст письма:</label>
-            <textarea name="text" id="writeus-textarea" cols="80" rows="4" placeholder="В свободной форме"></textarea>
+            <textarea name="text" id="writeus-textarea" cols="80" rows="4" placeholder="В свободной форме" aria-lable="Место для вашего сообщения в свободной форме"></textarea>
           </li>
         </ul>
         <button type="submit" id="writeus-submit" class="form-modal-submit btn-reset btn">Отправить</button>
