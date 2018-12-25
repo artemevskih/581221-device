@@ -14,7 +14,8 @@
         </a>
         <div class="main-navigation fl-container">
           <form action="https://echo.htmlacademy.ru" class="site-search js-search">
-            <input type="search" id="site-search" name="search" placeholder="Поиск по сайту" class="site-search-input" aria-label="Поиск по сайту">
+            <label for="site-search" class="visually-hidden">Поиск по сайту</label>
+            <input type="search" id="site-search" name="search" placeholder="Поиск по сайту" class="site-search-input">
             <button type="submit" class="site-search-btn btn-reset">Найти</button>
           </form>
 
@@ -46,9 +47,12 @@
     <main class="wrapper index-main">
       <div class="wrapper">
         <div class="slider">
-          <input type="radio" class="visually-hidden slider-control-1" name="slider-control" id="slider-control-1" checked aria-label="Слайд номер 1">
-          <input type="radio" class="visually-hidden slider-control-2" name="slider-control" id="slider-control-2" aria-label="Слайд номер 2">
-          <input type="radio" class="visually-hidden slider-control-3" name="slider-control" id="slider-control-3" aria-label="Слайд номер 3">
+          <label for="slider-control-1" class="visually-hidden">Слайд номер один</label>
+          <input type="radio" class="visually-hidden slider-control-1" name="slider-control" id="slider-control-1" checked>
+          <label for="slider-control-2" class="visually-hidden">Слайд номер два</label>
+          <input type="radio" class="visually-hidden slider-control-2" name="slider-control" id="slider-control-2">
+          <label for="slider-control-3" class="visually-hidden">Слайд номер три</label>
+          <input type="radio" class="visually-hidden slider-control-3" name="slider-control" id="slider-control-3">
           <div class="slider-controls">
             <label for="slider-control-1"></label>
             <label for="slider-control-2"></label>
@@ -413,15 +417,15 @@
         <ul class="lst-reset fl-container form-modal-list flw-wrap">
           <li class="form-modal-item">
             <label for="writeus-name">Ваше имя:</label>
-            <input type="text" placeholder="Имя Фамилия" id="writeus-name" name="name" aria-lable="Введите ваше имя">
+            <input type="text" placeholder="Имя Фамилия" id="writeus-name" name="name">
           </li>
           <li class="form-modal-item">
             <label for="writeus-email">Ваш e-mail:</label>
-            <input type="email" id="writeus-email" placeholder="email@example.com" name="email" aria-lable="Введите ваш электронный адрес">
+            <input type="email" id="writeus-email" placeholder="email@example.com" name="email">
           </li>
           <li class="form-modal-item">
             <label for="writeus-textarea">Текст письма:</label>
-            <textarea name="text" id="writeus-textarea" cols="80" rows="4" placeholder="В свободной форме" aria-lable="Место для вашего сообщения в свободной форме"></textarea>
+            <textarea name="text" id="writeus-textarea" cols="80" rows="4" placeholder="В свободной форме"></textarea>
           </li>
         </ul>
         <button type="submit" id="writeus-submit" class="form-modal-submit btn-reset btn">Отправить</button>
