@@ -306,6 +306,10 @@ a {
   position: static;
 }
 
+.site-search-btn:focus {
+  position: static;
+}
+
 .site-search-btn {
   box-sizing: border-box;
 
@@ -1620,13 +1624,16 @@ h1 {
   margin-bottom: 37px;
 }
 
-.color label:hover,
-.bluetooth label:hover {
+.filter-input:not(:disabled) + span:hover {
   opacity: 0.6;
 }
 
-.color label:active,
-.bluetooth label:active {
+.filter-input:disabled + span {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.filter-input:not(:disabled) + span:active {
   opacity: 1;
 }
 
@@ -1658,7 +1665,12 @@ h1 {
   z-index: 2;
   cursor: pointer;
   width: 20px;
-  height: 20px;
+  height: 22px;
+}
+
+.price-value:active:before,
+.price-value:active:after {
+  transform: scale(1.1);
 }
 
 .price-value:after {
