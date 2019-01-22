@@ -333,8 +333,6 @@ a {
   top: -9999px;
 
   cursor: default;
-
-  /* не завершено */
 }
 
 
@@ -449,6 +447,10 @@ a {
 .slider {
   width: 300%;
   padding-bottom: 102px;
+}
+
+.slider-relative {
+  position: relative;
 }
 
 .slider-item {
@@ -590,7 +592,7 @@ a {
 .slider-controls {
   position: absolute;
   z-index: 2;
-  top: 323px;
+  bottom: 251px;
   right: 66px;
 }
 
@@ -868,14 +870,22 @@ a {
   box-sizing: border-box;
 }
 
-.partner-link img {
-  filter: grayscale(1);
+.svg-logo .with-filter {
   opacity: 0.2;
+  display: block;
 }
 
-.partner-link:hover img {
-  filter: grayscale(0);
+.svg-logo .without-filter {
+  display: none;
   opacity: 1;
+}
+
+.svg-logo:hover .with-filter {
+  display: none;
+}
+
+.svg-logo:hover .without-filter {
+  display: block;
 }
 
 /********************* /partners *********************/
@@ -1537,7 +1547,6 @@ h1 {
   font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 14px;
   font-weight: 300;
-  /*line-height: 2.86;*/
   letter-spacing: 0.1px;
   color: #000000;
 

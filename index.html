@@ -45,7 +45,7 @@
     </header>
 
     <main class="wrapper index-main">
-      <div class="wrapper">
+      <div class="wrapper slider-relative">
         <div class="slider">
           <label for="slider-control-1" class="visually-hidden">Слайд номер один</label>
           <input type="radio" class="visually-hidden slider-control-1" name="slider-control" id="slider-control-1" checked>
@@ -310,25 +310,55 @@
     <ul class="fl-container partners wrapper lst-reset">
       <li class="partners-item">
         <a class="partner-link" href="#">
-          <img src="img/logo-1-jpg.jpg" alt="partner-1" width="260" height="100">
+          <svg class="svg-logo" role="image" width="260" height="100">
+            <image class="with-filter" width="260" height="100" preserveAspectRatio="xMidYMid slice" xlink:href="img/logo-1-jpg.jpg" filter="url(#grayscale)">
+            </image>
+            <image class="without-filter" width="260" height="100" preserveAspectRatio="xMidYMid slice" xlink:href="img/logo-1-jpg.jpg">
+            </image>
+          </svg>
         </a>
       </li>
       <li class="partners-item">
         <a class="partner-link" href="#">
-          <img src="img/logo-2-jpg.jpg" alt="partner-2" width="260" height="100">
+          <svg class="svg-logo" role="image" width="260" height="100">
+            <image class="with-filter" width="260" height="100" preserveAspectRatio="xMidYMid slice" xlink:href="img/logo-2-jpg.jpg" filter="url(#grayscale)">
+            </image>
+            <image class="without-filter" width="260" height="100" preserveAspectRatio="xMidYMid slice" xlink:href="img/logo-2-jpg.jpg">
+            </image>
+          </svg> 
         </a>
       </li>
       <li class="partners-item">
         <a class="partner-link" href="#">
-          <img src="img/logo-3-jpg.jpg" alt="partner-3" width="260" height="100">
+          <svg class="svg-logo" role="image" width="260" height="100">
+            <image class="with-filter" width="260" height="100" preserveAspectRatio="xMidYMid slice" xlink:href="img/logo-3-jpg.jpg" filter="url(#grayscale)">
+            </image>
+            <image class="without-filter" width="260" height="100" preserveAspectRatio="xMidYMid slice" xlink:href="img/logo-3-jpg.jpg">
+            </image>
+          </svg> 
         </a>
       </li>
       <li class="partners-item">
         <a class="partner-link" href="#">
-          <img src="img/logo-4-jpg.jpg" alt="partner-4" width="260" height="100">
+          <svg class="svg-logo" role="image" width="260" height="100">
+            <image class="with-filter" width="260" height="100" preserveAspectRatio="xMidYMid slice" xlink:href="img/logo-4-jpg.jpg" filter="url(#grayscale)">
+            </image>
+            <image class="without-filter" width="260" height="100" preserveAspectRatio="xMidYMid slice" xlink:href="img/logo-4-jpg.jpg">
+            </image>
+          </svg> 
         </a>
       </li>
     </ul>
+
+    <div class="visually-hidden" role="presentation">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="Playground__svg">
+        <defs>
+          <filter id="grayscale" x="0" y="0" width="100%" height="100%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+            <feColorMatrix type="saturate" values="0" in="SourceGraphic" result="colormatrix"></feColorMatrix>
+          </filter>
+        </defs>
+      </svg>
+    </div>    
 
     <div class="fl-container wrapper">
       <section class="info">
@@ -348,7 +378,6 @@
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
         <a href="img/map-big.jpg" class="contacts-map js-map">
           <img src="img/map.jpg" alt="Карта (уменьшенная)" width="560" height="220" class="map-preview">
-          <!-- <span class="visually-hidden">Увеличить карту</span> -->
         </a>
         <a href="writeus.html" title="Напишите нам" class="btn contacts-btn js-write-us">Напишите нам</a>
       </section>
@@ -436,8 +465,6 @@
     </section>
 
     <script src="js/script.min.js"></script>
-
-<!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
 
   </body>
 </html>
